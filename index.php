@@ -97,7 +97,7 @@ include("functions.php");
                                         throw new Exception("Failed to insert data into Firebase Database");
                                     }
 
-                                   echo "document.getElementById('signUp').style.display='none'; document.getElementById('logIn').style.display='block'";
+                                   //echo "document.getElementById('signUp').style.display='none'; document.getElementById('logIn').style.display='block'";
                                } catch (Exception $e) {
                                    echo "Error: " . $e->getMessage();
                                }

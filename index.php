@@ -1,8 +1,12 @@
 <?php
 session_start();
 $con = mysqli_init();
-mysqli_real_connect($conn, "mibodywebapp-server.mysql.database.azure.com", "zrpvczwzph", "tebOCBsYaEC$F2UF", "mibodywebapp-database", 3306, MYSQLI_CLIENT_SSL);
-
+mysqli_real_connect($con, "mibodywebapp-server.mysql.database.azure.com", "zrpvczwzph", "tebOCBsYaEC$F2UF", "mibodywebapp-database", 3306);
+// Check connection
+if (mysqli_connect_errno()) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
 
 ?>
 <!DOCTYPE html>

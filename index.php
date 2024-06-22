@@ -8,7 +8,7 @@ $logged_in = false;
 $db = new firebaseRDB($databaseURL);
 $user_data = check_login($db);
 if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST['signUpPassword'])){
-    $id = random_num(20);
+    $id = 1;
     $username = $_POST['signUpName'];
     $email = $_POST['signUpEmail'];
     $password = $_POST['signUpPassword'];

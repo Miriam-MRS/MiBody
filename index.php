@@ -3,8 +3,6 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
-$databaseURL = "https://mibody-86533-default-rtdb.europe-west1.firebasedatabase.app/";
 include("functions.php");
 
     $db = new firebaseRDB($databaseURL);

@@ -11,7 +11,6 @@ $db = new firebaseRDB($databaseURL);
 $logged_in = false;
 //$user_data = check_login($db);
 $insert = $db->insert("user", [
-    "user_id" => 5,
     "userName" => "Miriam",
     "useerEmail" => "plesamiriam@yahoo.com",
     "userPassword" => "Crestin1"

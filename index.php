@@ -79,8 +79,8 @@ $user_data = check_login($db);
                     <p><label><i class="fa fa-key"></i> Passwort:</label></p>
                     <input class="input border" type="password" name="signUpPassword" placeholder="******" required>
                     <input class="button block teal padding-16 section right" value="Einloggen" type="submit"
-                           onclick="<?php if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST['signUpPassword'])) {
-                                print_r("Signup");
+                           onclick="<?php  print_r("Signup: ", $_POST['signUpEmail'], $_POST['signUpName'], $_POST['signUpPassword']);
+                            if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST['signUpPassword'])) {
                                $email = $_POST['signUpEmail'];
                                $user_name = $_POST['signUpName'];
                                $password = $_POST['signUpPassword'];

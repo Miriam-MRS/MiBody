@@ -9,7 +9,7 @@ include("functions.php");
 
 $db = new firebaseRDB($databaseURL);
 $logged_in = false;
-$user_data = check_login($db);
+$user_data = null;//check_login($db);
 ?>
 
 <!DOCTYPE html>

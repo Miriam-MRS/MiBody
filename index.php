@@ -80,7 +80,7 @@ $user_data = check_login($db);
                     <input class="input border" type="password" name="signUpPassword" placeholder="******" required>
                     <input class="button block teal padding-16 section right" value="Einloggen" type="submit"
                            onclick="<?php if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST['signUpPassword'])) {
-                                print("Signup");
+                                print_r("Signup");
                                $email = $_POST['signUpEmail'];
                                $user_name = $_POST['signUpName'];
                                $password = $_POST['signUpPassword'];

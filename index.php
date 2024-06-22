@@ -43,7 +43,6 @@ if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
                 foreach ($result as $user) {
                     if ($user['email'] == $email && $user['password'] == $password) {
                         $_SESSION['user_id'] = $user['user_id'];
-                        header("Location: index.php");
                     die;
                     }
                 }

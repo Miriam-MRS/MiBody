@@ -7,14 +7,18 @@ error_reporting(E_ALL);
 $databaseURL = "https://mibody-86533-default-rtdb.europe-west1.firebasedatabase.app/";
 include("functions.php");
 
-$db = new firebaseRDB($databaseURL);
-$logged_in = false;
-//$user_data = check_login($db);
-$insert = $db->insert("user", [
-    "userName" => "Miriam",
-    "useerEmail" => "plesamiriam@yahoo.com",
-    "userPassword" => "Crestin1"
-]);
+    $db = new firebaseRDB($databaseURL);
+
+    // Insert data into 'user' node
+    $insert = $db->insert("user", [
+        "userName" => "Miriam",
+        "userEmail" => "plesamiriam@yahoo.com",
+        "userPassword" => "1234567"
+    ]);
+
+    if (!$insert) {
+        throw new Exception("Failed to insert data into Firebase Database");
+    }
 ?>
 
 <!DOCTYPE html>

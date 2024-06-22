@@ -28,14 +28,11 @@ if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
     $password = $_POST['logInPassword'];
         try {
             // Retrieve user data from Firebase
-            $user_data = $db->retrieve("user");
+            $user_data = $db->retrieve("user/$email");
             $user_data = json_decode($user_data, true);
 
-                $result = $db->retrieve("user");
-                $result = json_decode($result, 1);
-
-                foreach ($result as $user) {
-                    if ($user['email'] == $email && $user['password'] == $password) {
+                foreach ($user_data as $user) {
+                    if ($user_data['email'] == $email && $user_data['password'] == $password) {
                         $_SESSION['user_id'] = $user['user_id'];
                     die;
                     }

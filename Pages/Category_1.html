@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ro">
+<title>Unbreakable Machine</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../Styles/css.css">
+<link rel="stylesheet" href="../Styles/fonts.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+
+<style>
+    body {
+        display: flex;
+        align-items: stretch;
+        height: 100%;
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        align-items: stretch;
+    }
+
+
+    #mainSection {
+        zoom: 0.12;
+    }
+
+    #detailsFrame {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        display: flex;
+    }
+</style>
+<body>
+<table>
+    <tr>
+        <td>
+
+            <div id="mainSection">
+                <div style="height: 50px"></div>
+                <img src="../Assets/Images/images_png/category-1/category-1.png" usemap="#image-map" class="map"
+                     alt="Skeleton">
+                <map name="image-map">
+                    <area target="details" alt="RightHand" title="RightHand" href="../Pages/Category-1/element-1.html"
+                          coords="531,1719,431,2130,428,2435,512,2572,603,2559,621,2485,494,2192,584,1656,643,1616,659,1566,677,1551,640,1442,680,950,718,912,671,841,593,853,618,981,618,1221,603,1358,543,1529"
+                          shape="poly">
+                    <area target="details" alt="LeftHand" title="LeftHand" href="../Pages/Category-1/element-1.html"
+                          coords="1733,2619,1770,2625,1717,2637,1674,2591,1679,2565,1701,2403,1663,2450,1685,2291,1744,2166,1626,1662,1573,1609,1529,1550,1557,1475,1529,924,1493,869,1552,831,1590,828,1618,878,1590,978,1636,1479,1677,1526,1677,1703,1789,2108,1808,2220,1814,2385,1814,2553"
+                          shape="poly">
+                    <area target="details" alt="Head" title="Head" href="../Pages/Category-1/element-2.html"
+                          coords="945,411,945,271,986,224,1063,167,1160,164,1237,192,1278,220,1281,251,1300,311,1288,355,1278,414,1275,451,1260,504,1235,526,1225,567,1225,598,1182,638,1104,673,1023,620,986,588,1001,523,961,508"
+                          shape="poly">
+                    <area target="details" alt="Spine" title="Spine" href="../Pages/Category-1/element-3.html"
+                          coords="1073,1208,1035,1876,1187,1889,1182,1193" shape="poly">
+                    <area target="details" alt="Spine" title="Spine" href="../Pages/Category-1/element-3.html"
+                          coords="1054,648,1188,645,1197,797,1035,813" shape="poly">
+                    <area target="details" alt="Ribs" title="Ribs" href="../Pages/Category-1/element-5.html"
+                          coords="954,872,867,956,833,1099,827,1211,827,1323,839,1423,873,1498,914,1541,970,1445,1051,1239,1094,1155,1085,1037,1082,925,1169,931,1160,1158,1275,1252,1300,1407,1300,1529,1384,1504,1415,1382,1421,1183,1390,1034,1306,915,1256,847,1200,872,1175,894,1048,897,1004,862"
+                          shape="poly">
+                    <area target="details" alt="Stern" title="Stern" href="../Pages/Category-1/element-6.html"
+                          coords="1082,950,1088,1158,1151,1149,1151,947,1113,940" shape="poly">
+                    <area target="details" alt="Pelvis" title="Pelvis" href="../Pages/Category-1/element-7.html"
+                          coords="976,1821,827,1803,771,1862,852,1977,889,2086,948,2133,973,2239,1026,2289,1085,2232,1123,2214,1200,2279,1272,2245,1300,2167,1362,2055,1443,1840,1421,1784,1331,1762,1263,1790,1210,1812,1194,1874,1029,1890"
+                          shape="poly">
+                    <area target="details" alt="RightFoot" title="RightFoot" href="../Pages/Category-1/element-8.html"
+                          coords="864,2127,836,2180,786,2180,777,2323,877,3008,827,3101,830,3269,908,3864,917,3970,830,4094,901,4154,982,4129,1014,4020,1045,3908,973,3799,979,3251,1023,3120,970,3023,889,2248,954,2220,948,2139"
+                          shape="poly">
+                    <area target="details" alt="LeftFoot" title="LeftFoot" href="../Pages/Category-1/element-8.html"
+                          coords="1337,2189,1393,2242,1278,3011,1256,3014,1266,3129,1306,3188,1322,3683,1269,3799,1263,3905,1316,4107,1471,4026,1393,3892,1387,3746,1456,3201,1449,3079,1397,3023,1474,2298,1499,2242,1477,2152,1425,2170,1406,2120,1356,2080"
+                          shape="poly">
+                    <area target="details" alt="Scapula" title="Scapula" href="../Pages/Category-1/element-9.html"
+                          coords="721,931,811,1224,898,884,743,859,1312,875,1421,1161,1453,1040,1502,950,1465,859,1415,822,1403,872,892,862,808,841"
+                          shape="poly">
+                </map>
+            </div>
+        </td>
+        <td style="width: 100%">
+            <iframe id="detailsFrame" name="details" src="Category-1/description.html" class="display-container center"></iframe>
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+    $(function () {
+        $('.map').maphilight({
+            fillColor: 'ffffff',
+            strokeColor: "ffffff",
+            strokeWidth: 5,
+            strokeOpacity: 0.0001,
+            fillOpacity: 0.3
+        });
+    });
+</script>
+</body>
+
+</html>

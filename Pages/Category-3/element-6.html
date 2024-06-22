@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            scrollbar-color: transparent;
+            scrollbar-track-color: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 3px;
+            height: 2px;
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.234);
+            border-radius: 9999px;
+            position: absolute;
+        }
+
+        ::-webkit-scrollbar-track:hover {
+            box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.42);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.733);
+            border-radius: 9999px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #000000;
+        }
+
+        .artikelUbersicht {
+            width: 98%;
+        }
+
+        .artikelUbersichtElement {
+            border-top-width: 2px;
+            border-top-style: solid;
+            border-top-color: rgba(0, 0, 0, 0.63);
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: rgba(0, 0, 0, 0.63);
+            width: 98%;
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        .artikelUbersichtTitel {
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: rgba(0, 0, 0, 0.63);
+            width: 96%;
+            padding: 5px;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.63);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .artikelUbersicht:hover {
+            background-color: rgba(107, 168, 159, 0.13);
+        }
+
+        .artikelUbersichtElement:hover {
+            background-color: rgba(129, 103, 103, 0.08);
+        }
+
+        a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.63);
+            font-weight: bold;
+        }
+
+        p {
+            text-align: justify;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Das Herz</h1>
+<p>
+    Das menschliche <b>Herz</b> ist ein kräftiger, kegelförmiger Hohlmuskel. Es liegt im Brustkorb hinter dem Brustbein
+    mit der
+    Spitze zur linken Seite hin. Als Motor unseres Blutkreislaufs besitzt es eine enorme Leistungsfähigkeit – es pumpt
+    täglich etwa 8.000 Liter Blut durch den Körper. Bei sportlicher Anstrengung kann es seine Leistung bis zum
+    Fünffachen und mehr steigern. Lesen Sie alles Wichtige über Aufbau und Lage des Herzens, seine Funktion und wichtige
+    Erkrankungen!
+</p>
+<div class="artikelUbersichtTitel" id="artikel_ubersicht">
+    Artikel Übersicht
+</div>
+<div class="artikelUbersicht">
+    <a aria-label="Was ist das Herz?" href="#was_ist_das_herz">
+        <div class="artikelUbersichtElement">Was ist das Herz?</div>
+    </a>
+    <a aria-label="Herzkranzgefäße" href="#herzkranzgefäße">
+        <div class="artikelUbersichtElement">Herzkranzgefäße</div>
+    </a>
+    <a aria-label="Perikard" href="#perikard">
+        <div class="artikelUbersichtElement">Perikard</div>
+    </a>
+    <a aria-label="Welche Funktion hat das Herz?" href="#welche_funktion_hat_das_herz">
+        <div class="artikelUbersichtElement">Welche Funktion hat das Herz?</div>
+    </a>
+    <a aria-label="Wo liegt das Herz?" href="#wo_liegt_das_herz">
+        <div class="artikelUbersichtElement">Wo liegt das Herz?</div>
+    </a>
+    <a aria-label="Welche Probleme kann das Herz verursachen?" href="#welche_probleme_kann_das_herz_verursachen">
+        <div class="artikelUbersichtElement">Welche Probleme kann das Herz verursachen?</div>
+    </a>
+</div>
+
+<h2 id="was_ist_das_herz">Was ist das Herz?</h2>
+<p>
+    Das menschliche Herz ist ein kräftiger, kegelförmiger Hohlmuskel mit abgerundeter Spitze. Der Herzmuskel hat bei
+    einem Erwachsenen etwa die Größe einer Faust und wiegt durchschnittlich 250-300 Gramm. In der Regel ist das Herz
+    einer Frau etwas leichter als das eines Mannes. Das kritische Herzgewicht startet übrigens bei circa 500 Gramm.
+    Schwerere Herzen können kaum noch richtig durchblutet und mit genug Sauerstoff versorgt werden. Es droht ein
+    Herzinfarkt.
+</p>
+<h3>Herzvorhöfe und Herzkammern</h3>
+<p>
+    Der Herzaufbau ist an die komplexe Funktion des Organs als Motor des Blutkreislaufs angepasst. Die Herzscheidewand
+    (Septum) unterteilt den Hohlmuskel in eine linke und eine rechte Hälfte, die sich jeweils wieder in zwei
+    Kompartimente gliedern: linker und rechter Vorhof (Atrium) sowie linke und rechte Herzkammer (Ventrikel).
+</p>
+<p>
+    Von außen sieht man die Unterteilung in Vorhöfe und Herzkammern an der Herzkranzfurche, einer ringförmigen
+    Vertiefung (Sulcus coronarius). Von hier ziehen weitere Herzfurchen Richtung Herzspitze. An den sogenannten Sulci
+    interventriculares erkennt man von außen die Herzscheidewand im Inneren. In den Herzfurchen verlaufen
+    Herzkranzgefäße, welche Mediziner auch Koronararterien, Koronarien oder Koronargefäße nennen.
+</p>
+<h3>Herzohren</h3>
+<p>
+    Das Herz hat auch zwei sogenannte Herzohren, ein rechtes und ein linkes. Sie bestehen auf Muskelgewebe. Das rechte
+    Herzohr befindet sich neben der Hauptschlagader, das linke an der Lungenschlagader. Welche Funktion Herzohren haben,
+    wissen Forscher noch nicht ganz genau. Klar ist aber, dass sie ein wichtiges Eiweiß, das ANP (atriales
+    natriuretisches Peptid), bilden. Dieser Botenstoff regelt den Salz- und Wasserhaushalt und auf diese Weise auch den
+    Blutdruck. Außerdem bedecken die Herzohren Nischen, die zwischen abgehenden Gefäßen und der Herzbasis entstehen.
+</p>
+<h3>Herzskelett</h3>
+<p>
+    Das Herz besteht überwiegend aus Muskelgewebe. Es hat aber auch ein Gerüst aus straffem Bindegewebe, das sogenannte
+    Herzskelett. Daran ist nicht nur die Muskulatur befestigt. Es bildet auch Ringe aus Bindegewebsfasern, an denen die
+    Herzklappen sitzen. Damit spielt das Herzskelett eine entscheidende Rolle für die Funktion des Herzens.
+</p>
+<h3>Herzklappen</h3>
+<p>
+    Denn damit das Blut im Herzen in bestimmte Richtungen fließt, sind die Herzklappen ausschlaggebend: Vorhof und
+    Kammer jeder Seite stehen jeweils über eine Herzklappe in Verbindung. Zwischen dem linken Vorhof und der linken
+    Kammer befindet sich die Mitralklappe, zwischen dem rechten Vorhof und der rechten Kammer die Trikuspidalklappe. Sie
+    verhindern, dass das Blut in die Vorhöfe zurückströmt.
+</p>
+<p>
+    Am oberen Ende des Herzmuskels, der Herzbasis, gehen die großen Gefäße ab: von der rechten Kammer die Lungenarterie
+    (Arteria pulmonalis), die den Lungenkreislauf versorgt (kleiner Blutkreislauf). Hier ist die Pulmonalklappe
+    zwischengeschaltet, um sicherzustellen, dass das Blut nicht in die rechte Kammer zurückfließt. Von der linken
+    Herzkammer geht die Hauptschlagader (Aorta) ab, die den Körperkreislauf (großer Blutkreislauf) versorgt. Zwischen
+    linkem Ventrikel und Aorta liegt die Aortenklappe, um einen Blutrückstrom in die linke Kammer zu verhindern.
+</p>
+<h3>Herzwandschichten</h3>
+<p>
+    In der genauen Anatomie des Herzens besteht die Herzwand aus drei Schichten. Von außen nach innen sind dies:
+</p>
+<ul>
+    <li>Epikard (Herzaußenhaut, Teil des Herzbeutels)</li>
+    <li>Myokard (Herzmuskelschicht)</li>
+    <li>Endokard (Herzinnenhaut)</li>
+</ul>
+<p>
+    Das Endokard besteht aus Endothelzellen und Bindegewebe. Auch die Herzklappen gehen aus der Herzinnenhaut hervor.
+    Das Myokard ist der eigentliche Herzmuskel. Die Herzaußenhaut, das Epikard, ist eine einzelne Zellschicht. Außerdem
+    befindet sich dort Binde- und Fettgewebe. Darin verzweigen sich die Nerven und Blutgefäße des Herzens. Das Epikard
+    ist zugleich das innere Blatt des Herzbeutels.
+</p>
+<div class="artikelUbersicht">
+    <a aria-label="Artikel Ubersicht" href="#artikel_ubersicht">
+        <div class="artikelUbersichtElement" style="text-align: right">Zum Inhaltsverzeichnis</div>
+    </a>
+</div>
+
+<h2 id="herzkranzgefäße">Herzkranzgefäße</h2>
+<p>
+    Die Herzkranzgefäße (Koronararterien, Koronarien) sind die Blutgefäße, die direkt dem Herzen aufliegen und das
+    pausenlos tätige Herzmuskelgewebe mit Sauerstoff und Nährstoffen versorgen. Sie entspringen der Aorta direkt nach
+    deren Abgang aus der linken Herzkammer und winden sich um das Herz herum, um jeden Bereich der Muskulatur zu
+    erfassen. Lesen Sie alles Wichtige über die Herzkranzgefäße!
+</p>
+<h3>Was sind die Herzkranzgefäße?</h3>
+<p>
+    Die Herzkranzgefäße oder Koronargefäße umgeben kranzförmig den Herzmuskel. Benannt sind sie nach der Lage ihrer
+    Hauptstämme in der Kranzfurche des Herzens – einer ringförmigen Vertiefung an der Außenseite des Herzens, welche die
+    Grenze zwischen den beiden Vorhöfen und den Herzkammern markiert.
+</p>
+<p>
+    Es gibt zwei große Koronararterien, die sich im weiteren Verlauf verzweigen:
+</p>
+<ul>
+    <li>Rechte Koronararterie: kurz RCA (right coronary artery) oder ACD (Arteria coronaria dextra)</li>
+    <li>Linke Koronararterie: kurz LCA (left coronary artery) oder LMCA (left main coronary artery) oder ACS (Arteria
+        coronaria sinistra)
+    </li>
+</ul>
+<p>
+    Die rechte Koronararterie (RCA-Herzgefäß) zieht horizontal um die rechte Herzhälfte herum und versorgt den größten
+    Teil des rechten Herzens und den hinteren Teil der Scheidewand (Trennwand zwischen rechter und linker Herzhälfte).
+    Als Ramus interventricularis posterior (RIVP, RPD) zieht sie auf der Rückseite des Herzens bis zur Herzspitze hinab
+    und versorgt die hintere Wand der linken Kammer. Nebenäste versorgen den rechten Vorhof sowie den Sinus- und den
+    AV-Knoten, die für die Erregungsbildung und Erregungsleitung wichtig sind.
+</p>
+<p>
+    Die linke Koronararterie ist größer als die rechte und teilt sich in zwei Hauptäste (mit Nebenästen) auf: Der Ramus
+    interventricularis anterior (RIVA oder left anterior descending coronary artery – LAD) und der Ramus circumflexus
+    (RCX). Das RIVA-Herzgefäß (LAD-Herzgefäß) steigt auf der Vorderseite des Herzens zwischen der rechten und linken
+    Herzkammer ab und versorgt die linke Herzkammer sowie einen schmalen Streifen der rechten Kammer. Der kleinere Ast
+    (RCX) versorgt den linken Vorhof, zieht zur Hinterwand der linken Kammer und verläuft schräg über deren Außenwand.
+</p>
+<p>
+    Die beiden Herzkranzgefäße mit ihren Verzweigungen stehen über zahlreiche Verbindungen (Anastomosen) in Kontakt.
+    Diese können jedoch bei einem Verschluss eines der Äste keinen ausreichenden Umgehungskreislauf bilden – der
+    Verschluss einer Koronararterie bedeutet immer einen Herzinfarkt.
+</p>
+<p>
+    Die Herzkranzgefäße sind individuell unterschiedlich groß. Bei manchen Menschen versorgt zum Beispiel die linke
+    Koronararterie fast das gesamte Herz.
+</p>
+<h3>Welche Funktion haben die Herzkranzgefäße?</h3>
+<p>
+    Die Koronargefäße versorgen die Muskulatur des Herzens mit Sauerstoff und allen wichtigen Nährstoffen. Jede
+    Koronararterie hat ein bestimmtes Gebiet, das von ihr versorgt wird (manche Bereiche des Herzens werden auch von
+    mehreren Seiten versorgt). Zwischen den Herzschlägen, wenn der Herzmuskel erschlafft (Diastole), strömt Blut aus der
+    Aorta in die Herzkranzgefäße.
+</p>
+<h3>Wo befinden sich die Herzkranzgefäße?</h3>
+<p>
+    Die Koronararterien liegen unter dem Epikard, dem inneren Blatt des Perikards (Herzbeutel). Sie entspringen der
+    Aorta kurz deren Abgang aus der linken Herzkammer und spinnen sich kranzförmig ums Herz.
+</p>
+<h3>Welche Probleme können die Herzkranzgefäße verursachen?</h3>
+<p>
+    Wenn sich die Herzkranzgefäße durch Fett- und Kalkablagerungen (Arteriosklerose) zunehmend verengen, beeinträchtigt
+    dies die Versorgung des Herzmuskels mit Sauerstoff und Nährstoffen. Mediziner sprechen dann von der Koronaren
+    Herzkrankheit (KHK). Sie äußert sich meist durch Schmerzen und ein Druckgefühl im Brustraum (Angina pectoris). Im
+    weiteren Verlauf können Folgeerkrankungen wie Herzschwäche, Herzrhythmusstörungen und Herzinfarkt auftreten. Ein
+    Herzinfarkt entsteht in der Regel dadurch, dass eines der Herzkranzgefäße durch ein Blutgerinnsel teilweise oder
+    vollständig verstopft wird.
+</p>
+<div class="artikelUbersicht">
+    <a aria-label="Artikel Ubersicht" href="#artikel_ubersicht">
+        <div class="artikelUbersichtElement" style="text-align: right">Zum Inhaltsverzeichnis</div>
+    </a>
+</div>
+
+<h2 id="perikard">Perikard</h2>
+<p>
+    Das Perikard ist der Herzbeutel, eine Gewebehülle, in der sich das Herz bewegt. Es besteht aus zwei Schichten, dem
+    Epikard, das direkt dem Herzen aufliegt und einer äußeren Schicht, dem eigentlichen Perikard. Zwischen den beiden
+    Schichten befindet sich seröse Flüssigkeit, die dem Herzmuskel ein reibungsloses Bewegen und Ausdehnen ermöglicht.
+    Lesen Sie alles Wichtige über das Perikard!
+</p>
+<h3>Was ist das Perikard?</h3>
+<p>
+    Das Herz ist von einer doppelwandigen Hülle umgeben, dem Herzbeutel (Perikard): Das innere Blatt, das Epikard, liegt
+    direkt dem Herzen auf. Es ist über Binde- und Fettgewebe mit dem Myokard (Herzmuskelschicht) verbunden und überzieht
+    das Herz und die Abgänge der großen Gefäße. In diesem Bereich schlägt das Epikard um und geht über in das äußere
+    Blatt des Herzbeutels, das als Perikard im engeren Sinne bezeichnet wird und aus dreischichtigem Bindegewebe
+    besteht. Zwischen den beiden Blättern des Herzbeutels – in der spaltförmigen Herzbeutelhöhle – befindet sich eine
+    seröse Flüssigkeit benetzte Höhle. Sie wird vom Epikard abgesondert und ermöglicht ein reibungsloses Gleiten
+    zwischen den beiden Schichten bei jedem Herzschlag, bei jeder Form-, Größen- und Lageveränderung des Herzens.
+</p>
+<p>
+    Der Herzbeutel ist durch Bänder mit dem Brustbein, dem Zwerchfell und der Wirbelsäule verbunden. Unter der inneren
+    Schicht (Epikard) verlaufen die Herzkranzgefäße (Koronararterien), die das Herz mit Nährstoffen und mit Sauerstoff
+    versorgen. Zwischen den Umschlagstellen und den Venenmündungen befinden sich mehrere Buchten (Recessus), die sich
+    bei großen Ergüssen im Herzbeutel füllen können.
+</p>
+<h3>Welche Funktion hat das Perikard?</h3>
+<p>
+    Der Herzbeutel schützt das Herz und hat Einfluss auf seine Ausdehnung: Bei langsamer Ausdehnung gibt es ohne
+    größeren Druckanstieg nach, bei stärkerer Dehnung steigt der Druck an. Eine plötzliche Flüssigkeitszunahme im
+    Kreislaufsystem oder im Perikardraum verstärkt ebenfalls den Gegendruck. Unter normalen „gesunden“ Bedingungen
+    beeinflusst es den diastolischen Druck im rechten Vorhof und im rechten Ventrikel.
+</p>
+<h3>Wo befindet sich das Perikard?</h3>
+<p>
+    Der Herzbeutel umschließt das Herz, das im Brustkorb hinter dem Brustbein liegt.
+</p>
+<h3>Welche Probleme kann das Perikard verursachen?</h3>
+<p>
+    Eine akute oder chronische Entzündung des Herzbeutels (Perikarditis) kann zum Beispiel nach direkten oder indirekten
+    Verletzungen auftreten. Weitere mögliche Ursachen sind Erkrankungen wie Herzinfarkt, Lungenembolie, Infektions- oder
+    Stoffwechselkrankheiten. Manchmal bleibt der Auslöser der Entzündung auch unbekannt (idiopathische
+    Herzbeutelentzündung).
+</p>
+<p>
+    Als Folge der Perikarditis kann sich zu viel Flüssigkeit in der Herzbeutelhöhle ansammeln (Perikarderguss). Das kann
+    die Pumpfunktion des Herzens beeinträchtigen, was Mediziner als Perikardtamponade bezeichnen. Der Erguss muss dann
+    unbedingt punktiert werden, das heißt, der Arzt führt eine feine Hohlnadel in die Herzbeutelhöhle ein und saugt
+    damit die überschüssige Flüssigkeit ab.
+</p>
+<p>
+    Eine Entzündung des Herzbeutels kann auch zu einem „Panzerherz“ (konstriktive Perikarditis) führen: Darunter
+    versteht man eine bindegewebige Verdickung oder Verkalkung des Perikards.
+</p>
+<div class="artikelUbersicht">
+    <a aria-label="Artikel Ubersicht" href="#artikel_ubersicht">
+        <div class="artikelUbersichtElement" style="text-align: right">Zum Inhaltsverzeichnis</div>
+    </a>
+</div>
+
+<h2 id="welche_funktion_hat_das_herz">Welche Funktion hat das Herz?</h2>
+<p>
+    Die Funktion des Herzens besteht in der Bewegung des Blutes im Kreislaufsystem, genauer gesagt im kleinen und großen
+    Blutkreislauf. Der Körpermotor wirkt wie eine Druck- und Saugpumpe, in der Ventile – die verschiedenen Klappen – die
+    Stromrichtung (Blutfluss) regeln. Sie sorgen dafür, dass das Blut immer in die richtige Richtung gepumpt wird und
+    nicht zurückfließt.
+</p>
+<p>
+    Damit sich ein menschliches Herz regelmäßig und geordnet zusammenziehen (kontrahieren) und das Blut damit in den
+    Gefäßen fließen kann, sind elektrische Impulse nötig. Dafür gibt es im rechten Vorhof einen „Schrittmacher“
+    (Sinusknoten). Er erzeugt selbständig elektrische Impulse, die sich über die Vorhöfe verteilen und das Muskelgewebe
+    zur Kontraktion anregen. Über den AV-Knoten, eine Schaltstelle zwischen den Vorhöfen und den Kammern, gelangt das
+    Signal in die Herzkammern, die sich danach ebenfalls kontrahieren – das Herz „pumpt“. Diese Erregungswellen lassen
+    sich im EKG (Elektrokardiogramm) bildlich darstellen.
+</p>
+<p>
+    Bei diesem Reizleitungssystem spielt das Herzskelett ebenfalls eine wichtige Rolle. Es dient der elektrischen
+    Isolierung zwischen Vorhöfen und Herzkammern. Dadurch breiten sich die elektrischen Impulse nicht wahllos von den
+    Vorhöfen des Herzens über die gesamte Kammermuskulatur aus.
+</p>
+<div class="artikelUbersicht">
+    <a aria-label="Artikel Ubersicht" href="#artikel_ubersicht">
+        <div class="artikelUbersichtElement" style="text-align: right">Zum Inhaltsverzeichnis</div>
+    </a>
+</div>
+
+<h2 id="wo_liegt_das_herz">Wo liegt das Herz?</h2>
+<p>
+    Das menschliche Herz liegt im Brustkorb hinter dem Brustbein. Seine breite Basis zeigt nach rechts oben und hinten,
+    seine abgerundete Spitze nach links unten und vorn. Die rechte Herzhälfte liegt an der vorderen Brustwand. Das linke
+    Herz wendet sich mehr nach links und nach hinten. Die Lage des Herzens im Brustkorb bietet einen besonderen Schutz.
+    Denn hinter dem Herz liegt die Wirbelsäule. Seitlich und vorne umgeben die Rippen und das Brustbein schützend das
+    Herz.
+</p>
+<h3>Wo sitzt das Herz? Welche Nachbarorgane hat es?</h3>
+<p>
+    Das Herzorgan ist von einem Bindegewebsbeutel, dem Perikard, umgeben und liegt im unteren mittleren Mediastinum. Das
+    ist der Brustkorbraum zwischen den beiden Lungenflügeln. Sie befinden sich rechts und links des Herzens. Nach unten
+    liegt das Herz dem Zwerchfell auf. Oberhalb der Herzbasis, wo die Gefäße abgehen, teilt sich die Luftröhre (Trachea)
+    in die zwei Hauptatemwegsäste, die Bronchien. Die Hauptschlagader verläuft hier bogenförmig über den linken
+    Bronchus. Nach hinten berührt der linke Vorhof die Speiseröhre.
+</p>
+<h3>Auf welcher Seite ist das Herz?</h3>
+<p>
+    Der rechte Herzrand liegt ungefähr eine gute Daumenbreite rechts neben dem Brustbein, etwa auf Höhe der zweiten bis
+    vierten Rippe. Nach links zieht sich das Herz schräg nach unten bis zur Herzspitze. Sie liegt in etwa zwischen der
+    fünften und sechsten Rippe an einer gedachten Linie, die von der Mitte des Schlüsselbeins gerade nach unten geht.
+    Damit befinden sich etwa zwei Drittel des Herzens in der linken Brustkorbhälfte.
+</p>
+<div class="artikelUbersicht">
+    <a aria-label="Artikel Ubersicht" href="#artikel_ubersicht">
+        <div class="artikelUbersichtElement" style="text-align: right">Zum Inhaltsverzeichnis</div>
+    </a>
+</div>
+
+<h2 id="welche_probleme_kann_das_herz_verursachen">Welche Probleme kann das Herz verursachen?</h2>
+<p>
+    Bei Menschen mit einer Herzinsuffizienz (Herzschwäche) ist der Körpermotor nicht in der Lage, die notwendige
+    Pumpleistung aufzubringen. Die Erkrankung kann akut oder chronisch sein. In schweren Fällen müssen Ärzte das
+    Herzorgan durch ein Spenderorgan ersetzen (Herztransplantation).
+</p>
+<p>
+    Wenn sich der Hohlmuskel nicht geordnet zusammenzieht, liegen Herzrhythmusstörungen vor. Zu den häufigsten Formen
+    zählen Vorhofflimmern und Vorhofflattern. Haben Menschen einen stark verlangsamten Herzschlag, sprechen Ärzte von
+    einer Bradykardie. Das Gegenteil ist das Herzrasen, medizinisch Tachykardie genannt.
+</p>
+<p>
+    Durch Fett und andere Ablagerungen verengte Herzkranzgefäße (Atherosklerose oder Arteriosklerose) können den
+    Körpermotor nur noch unzureichend mit Sauerstoff und Nährstoffen versorgen. Mediziner sprechen von der Koronaren
+    Herzkrankheit (KHK). Sie ist die häufigste Todesursache in den westlichen Industrieländern. Denn im schlimmsten Fall
+    kann die KHK zu einem Herzinfarkt (Myokardinfarkt) führen.
+</p>
+<p>
+    Die Herzklappen können von Geburt an undicht sein oder im Laufe des Lebens undicht werden. Bei einem schweren
+    Herzklappenfehler schließen oder öffnen sie nicht mehr richtig. Dadurch strömt das Blut in den Vorhof oder in die
+    Kammer zurück oder wird nicht mehr richtig weitertransportiert. Manchmal benötigen Betroffene dann eine künstliche
+    Klappe.
+</p>
+<p>
+    Löcher in der Herzscheidewand (Septumdefekt) zählen zu den häufigsten angeborenen Herzfehlern. Seltener werden sie
+    im Laufe des Lebens erworben. Sie finden sich vor allem in der Kammerscheidewand, seltener auch im Vorhofseptum.
+    Durch ein solches "Loch im Herzen" kann Blut vom linken direkt ins rechte Herz fließen.
+</p>
+<p>
+    Außerdem können verschiedene Krankheitserreger das Herz befallen. Im Rahmen eines viralen oder bakteriellen Infektes
+    drohen eine Herzmuskelentzündung (Myokarditis), insbesondere wenn sich Erkrankte nicht körperlich schonen, oder eine
+    Herzinnenhautentzündung (Endokarditis). Hiervon sind besonders Patienten mit künstlicher Herzklappe oder schweren
+    Defekten am Herz gefährdet.
+</p>
+<div class="artikelUbersicht">
+    <a aria-label="Artikel Ubersicht" href="#artikel_ubersicht">
+        <div class="artikelUbersichtElement" style="text-align: right">Zum Inhaltsverzeichnis</div>
+    </a>
+</div>
+</body>
+</html>

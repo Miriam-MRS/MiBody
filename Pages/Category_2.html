@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ro">
+<title>Unbreakable Machine</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../Styles/css.css">
+<link rel="stylesheet" href="../Styles/fonts.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+
+<style>
+    body {
+        zoom: 1.4;
+    }
+
+    #detailsFrame {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        display: inline-block;
+        color: black;
+        text-transform: uppercase;
+        transition: all .3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+    }
+
+    a:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7847514005602241) 0%, rgba(255, 255, 255, 1) 6%);
+        z-index: -2;
+    }
+
+    a:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.7847514005602241) 0%, rgba(255, 255, 255, 1) 76%);;
+        transition: all .3s;
+        z-index: -1;
+    }
+
+    a:hover {
+        color: rgba(0, 0, 0, 0.74);
+    }
+
+    a:hover:before {
+        width: 100%;
+    }
+
+
+    #details {
+        margin-left: 800px;
+        display: none;
+
+        overflow: hidden;
+    }
+</style>
+
+<body id="main">
+
+<div style="position:absolute; height: 100%" id="aux"></div>
+<div id="mainSection">
+    <center>
+        <div style="height: 30px"></div>
+        <img src="../Assets/Images/images_png/category-2/category-2-2.png" usemap="#image-map" class="map">
+
+        <map name="image-map">
+            <area target="details" onclick="toggleDetails()" alt="Trapezius" title="Trapezius"
+                  href="../Pages/Category-2/element-1.html"
+                  coords="72,71,68,62,59,71,82,71,88,63,98,71,236,75,256,122,253,58,229,75,266,76,265,117,280,84,289,80,286,71,273,60,266,76"
+                  shape="poly">
+            <area target="details" onclick="toggleDetails()" alt="Deltoid" title="Deltoid"
+                  href="../Pages/Category-2/element-2.html"
+                  coords="52,84,32,96,37,75,60,72,52,84,103,81,107,88,124,97,121,82,112,70,97,72,103,81" shape="poly">
+            <area target="details" onclick="toggleDetails()" alt="PectoralisMajor" title="PectoralisMajor"
+                  href="../Pages/Category-2/element-3.html"
+                  coords="51,88,53,100,62,103,73,100,75,88,73,75,61,72,50,87,78,100,79,76,96,76,105,86,100,102,85,103"
+                  shape="poly">
+            <area target="details" onclick="toggleDetails()" alt="Biceps" title="Biceps"
+                  href="../Pages/Category-2/element-4.html"
+                  coords="31,120,35,132,43,126,46,110,48,98,45,88,30,96,29,119,109,119,116,127,125,127,128,116,124,102,110,90,106,99,109,119"
+                  shape="poly">
+            <area target="details" onclick="toggleDetails()" alt="Obliques" title="Obliques"
+                  href="../Pages/Category-2/element-5.html"
+                  coords="55,105,53,140,64,145,61,106,95,108,103,107,105,115,104,137,96,143,96,108" shape="poly">
+            <area target="details" onclick="toggleDetails()" alt="RectusAbdominis" title="RectusAbdominis"
+                  href="../Pages/Category-2/element-6.html" coords="63,109,65,144,95,143,93,109,87,102,67,101"
+                  shape="poly">
+            <area target="details" onclick="toggleDetails()" alt="Quadriceps" title="Quadriceps"
+                  href="../Pages/Category-2/element-7.html"
+                  coords="50,163,44,188,43,208,48,228,56,240,67,241,71,212,75,184,63,166,55,155,48,163,105,158,113,190,112,224,108,235,89,236,81,187,87,173,97,159"
+                  shape="poly">
+                <area target="details" onclick="toggleDetails()" alt="Triceps" title="Triceps"
+                  href="../Pages/Category-2/element-8.html"
+                  coords="294,97,307,111,311,104,299,90,293,97,227,95,211,108,210,100,217,91,226,95" shape="poly">
+            <area target="details" onclick="toggleDetails()" alt="LatissimusDorsi" title="LatissimusDorsi"
+                  href="../Pages/Category-2/element-9.html"
+                  coords="264,119,264,127,273,134,277,146,278,151,286,153,285,141,284,130,292,103,278,102,264,118,256,123,243,102,228,104,230,114,234,127,235,137,236,147,241,153,247,139,248,130,255,122"
+                  shape="poly">
+            <area target="details" onclick="toggleDetails()" alt="GluteusMaximus" title="GluteusMaximus"
+                  href="../Pages/Category-2/element-10.html"
+                  coords="241,160,234,171,233,183,237,193,247,196,256,192,257,185,261,188,265,193,272,197,279,192,287,184,289,171,286,160,278,157,271,161,265,167,261,172,256,167,248,160"
+                  shape="poly">
+            <area target="details" onclick="toggleDetails()" alt="Hamstrings" title="Hamstrings"
+                  href="../Pages/Category-2/element-11.html"
+                  coords="244,198,237,210,238,226,238,236,244,248,246,258,250,239,252,227,247,212,245,198,273,196,273,204,269,217,267,227,267,237,269,250,272,257,277,240,282,223,281,210,275,196"
+                  shape="poly">
+        </map>
+    </center>
+</div>
+<div id="details">
+    <a href="#" class="previous" onclick="toggleDetails()">&laquo; Zurück</a>
+    <iframe id="detailsFrame" name="details" class="display-container center"></iframe>
+
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('.map').maphilight({
+            fillColor: 'ffffff',
+            strokeColor: "ffffff",
+            strokeWidth: 5,
+            strokeOpacity: 0.0001,
+            fillOpacity: 0.3
+        });
+    });
+
+    let active = false;
+
+    function toggleDetails() {
+        const mainSection = document.getElementById('mainSection')
+        const detailsFrame = document.getElementById('detailsFrame')
+        const details = document.getElementById('details')
+
+        const width = window.innerWidth + 100;
+        if (active) {
+            $("#mainSection").animate({
+                marginLeft: "0px"
+            })
+            $("#details").animate({
+                marginLeft: window.innerWidth
+            })
+            active = false
+                details.style.height = '0px'
+        } else {
+            $("#mainSection").animate({
+                marginLeft: -width
+            })
+            $("#details").animate({
+                marginLeft: "0px"
+            })
+            mainSection.style.height = '0'
+            details.style.display = 'block'
+            detailsFrame.style.height = (document.getElementById('aux').clientHeight - 50).toString() + 'px';
+            details.style.height = '100%'
+            detailsFrame.style.paddingTop = '5px'
+            active = true
+        }
+    }
+</script>
+</body>
+
+</html>

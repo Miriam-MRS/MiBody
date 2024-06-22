@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            scrollbar-color: transparent;
+            scrollbar-track-color: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 3px;
+            height: 2px;
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.234);
+            border-radius: 9999px;
+            position: absolute;
+        }
+
+        ::-webkit-scrollbar-track:hover {
+            box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.42);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.733);
+            border-radius: 9999px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #000000;
+        }
+
+        .artikelUbersicht {
+            width: 98%;
+        }
+
+        .artikelUbersichtElement {
+            border-top-width: 2px;
+            border-top-style: solid;
+            border-top-color: rgba(0, 0, 0, 0.63);
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: rgba(0, 0, 0, 0.63);
+            width: 98%;
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        .artikelUbersichtTitel {
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: rgba(0, 0, 0, 0.63);
+            width: 96%;
+            padding: 5px;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.63);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .artikelUbersicht:hover {
+            background-color: rgba(107, 168, 159, 0.13);
+        }
+
+        .artikelUbersichtElement:hover {
+            background-color: rgba(129, 103, 103, 0.08);
+        }
+
+        a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.63);
+            font-weight: bold;
+        }
+
+        p {
+            text-align: justify;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Die Lunge</h1>
+<h2>Die Lunge – das zentrale Atmungsorgan</h2>
+<p>
+    Unser Atmungsorgan, die Lunge, ist unglaublich leistungsstark: Pro Tag atmen wir etwa 12 000 Liter Luft ein. Das
+    entspricht der Menge von 75 gefüllten Badewannen. Gleichzeitig ist die Lunge aber auch sehr sensibel: Sind die
+    Lungenbläschen einmal beschädigt, können sie weder geheilt werden, noch wachsen sie nach.
+</p>
+<div class="artikelUbersichtTitel" id="artikel_ubersicht">
+    Artikel Übersicht
+</div>
+<div class="artikelUbersicht">
+    <a aria-label="Wie ist die Lunge aufgebaut?" href="#wie_ist_die_lunge_aufgebaut">
+        <div class="artikelUbersichtElement">Wie ist die Lunge aufgebaut?</div>
+    </a>
+    <a aria-label="Wie funktioniert die Lunge?" href="#wie_funktioniert_die_lunge">
+        <div class="artikelUbersichtElement">Wie funktioniert die Lunge?</div>
+    </a>
+    <a aria-label="Reinigung der eingeatmeten Luft" href="#reinigung_der_eingeatmeten_luft">
+        <div class="artikelUbersichtElement">Reinigung der eingeatmeten Luft</div>
+    </a>
+    <a aria-label="Was passiert bei einer Schädigung der Lunge?" href="#was_passiert_bei_einer_schadigung_der_lunge">
+        <div class="artikelUbersichtElement">Was passiert bei einer Schädigung der Lunge?</div>
+    </a>
+    <a aria-label="Das Wunder der Lunge" href="#das_wunder_der_lunge">
+        <div class="artikelUbersichtElement">Das Wunder der Lunge</div>
+    </a>
+</div>
+
+<h2 id="wie_ist_die_lunge_aufgebaut">Wie ist die Lunge aufgebaut?</h2>
+<p>
+    Die Lunge besteht aus zwei Lungenflügeln. Der rechte Lungenflügel ist etwas grösser als der linke. In beiden
+    Lungenflügeln verzweigen sich Luftkanäle, die sogenannten Bronchien, wie die Äste eines Baumes. Die kleinsten dieser
+    Verzweigungen nennt man Bronchiolen. Am Ende dieser Bronchiolen befinden sich Lungenbläschen (Alveolen). Der Mensch
+    verfügt etwa über 300 Millionen Lungenbläschen.
+</p>
+
+<h2 id="wie_funktioniert_die_lunge">Wie funktioniert die Lunge?</h2>
+<p>
+    Die Lunge funktioniert ähnlich wie eine Pumpe. Sie selbst hat keine Muskulatur. Beim Einatmen dehnen das Zwerchfell
+    und die Rippenmuskeln die Lunge, erzeugen dadurch einen Unterdruck und saugen frische Atemluft ein. Die Atemluft
+    gelangt über die oberen Atemwege und die Luftröhre in die Bronchien. Über die Bronchien und die Bronchiolen gelangt
+    die Luft in die Lungenbläschen. Diese wiederum sind von unzähligen feinen Blutgefässen des Lungenkreislaufs umgeben.
+    Hier findet der Gasaustausch statt: Das sauerstoffarme Blut fliesst um die Lungenbläschen, nimmt Sauerstoff auf und
+    gibt gleichzeitig Kohlendioxid ab. Beim Ausatmen erschlaffen die Muskeln und die Luft wird durch die Luftröhre
+    ausgeatmet.
+</p>
+<center><img alt="Lungen Details"
+             src="https://www.lunge-zuerich.ch/image/02_Lunge%20und%20Luft/01_Lunge/01_die_Lunge/So_funktioniert_die_Lunge.jpg"
+             width="98%"></center>
+
+<h2 id="reinigung_der_eingeatmeten_luft">Reinigung der eingeatmeten Luft</h2>
+<p>
+    Während dem Einatmen wird die Luft gereinigt. Die Nase, die Luftröhre und die Bronchien sind mit kleinsten
+    Flimmerhärchen ausgekleidet. Diese fangen eingeatmete Schadstoffe wie Staubpartikel, Pollen und Bakterien auf. Die
+    Flimmerhärchen sind ständig in Bewegung, ähnlich wie Getreide im Wind, und befördern die schädlichen Partikel an
+    klebrigem Schleim aus der Lunge heraus in den Rachen. Dort wird der Schleim entweder unbemerkt verschluckt oder
+    abgehustet.
+</p>
+
+<h2 id="was_passiert_bei_einer_schadigung_der_lunge">Was passiert bei einer Schädigung der Lunge?</h2>
+<p>
+    Die Lungenbläschen sind grundsätzlich durch die vor ihnen liegenden Bronchien gut geschützt. Bei einer
+    Lungenkrankheit oder aufgrund starker Schadstoffbelastung, beispielsweise durch Zigarettenrauch oder Abgase, können
+    die Lungenbläschen geschädigt oder zerstört werden. In einem solchen Fall kommt es zu einer Beeinträchtigung der
+    Atemfunktion. Sind die Lungenbläschen einmal zerstört oder beschädigt, können sie weder geheilt werden, noch wachsen
+    sie nach. Auch kann die Funktion geschädigter Lungenbläschen nicht einfach von anderen gesunden Lungenbläschen
+    übernommen werden.
+</p>
+
+<h2 id="das_wunder_der_lunge">Das Wunder der Lunge</h2>
+<p>
+    In diesem Film lernen Sie in wenigen Minuten die Funktionsweise der Lunge kennen.
+</p>
+<center>
+    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="aspect-ratio: 16/9; width: 98%"
+            type="text/html"
+            src="https://www.youtube.com/embed/bohphFYdXxc?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=http://youtubeembedcode.com">
+    </iframe>
+</center>
+
+<div class="artikelUbersicht">
+    <a aria-label="Artikel Ubersicht" href="#artikel_ubersicht">
+        <div class="artikelUbersichtElement" style="text-align: right">Zum Inhaltsverzeichnis</div>
+    </a>
+</div>
+</body>
+</html>

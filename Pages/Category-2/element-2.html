@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            scrollbar-color: transparent;
+            scrollbar-track-color: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 3px;
+            height: 2px;
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.234);
+            border-radius: 9999px;
+            position: absolute;
+        }
+
+        ::-webkit-scrollbar-track:hover {
+            box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.42);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.733);
+            border-radius: 9999px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #000000;
+        }
+
+        .artikelUbersicht {
+            width: 98%;
+        }
+
+        .artikelUbersichtElement {
+            border-top-width: 2px;
+            border-top-style: solid;
+            border-top-color: rgba(0, 0, 0, 0.63);
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: rgba(0, 0, 0, 0.63);
+            width: 98%;
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        .artikelUbersichtTitel {
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: rgba(0, 0, 0, 0.63);
+            width: 96%;
+            padding: 5px;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.63);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .artikelUbersicht:hover {
+            background-color: rgba(107, 168, 159, 0.13);
+        }
+
+        .artikelUbersichtElement:hover {
+            background-color: rgba(129, 103, 103, 0.08);
+        }
+
+        a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.63);
+            font-weight: bold;
+        }
+
+        p {
+            text-align: justify;
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div>
+    <div style="display: flex; align-items: center; justify-content: center">
+        <table
+                style="border-collapse: collapse; border-style: solid; margin-top:0; width:90%;">
+
+            <tbody>
+            <tr>
+                <th style="background-color:#ff8c8c; text-align:center;">
+                    Musculus deltoideus
+                </th>
+            </tr>
+            <tr>
+                <td style="text-align:center;">
+                    <img
+                            alt="Der Deltamuskel.png"
+                            src="//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Deltoideus.png/200px-Deltoideus.png"
+                            width="250" height="247"
+                            data-file-width="510" data-file-height="504">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;">
+                    Der Deltamuskel
+                </td>
+            </tr>
+            <tr>
+                <th style="background-color:#fcc; text-align:center;">
+                    Ursprung
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Pars clavicularis: Schlüsselbein<br>
+                    Pars acromialis: Acromion des Schulterblatts<br>
+                    Pars spinalis: Schulterblatt (Spina scapulae)<br>
+                </td>
+            </tr>
+            <tr>
+                <th style="background-color:#fcc; text-align:center;">
+                    Ansatz
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Oberarmknochen (Tuberositas deltoidea humeri)
+                </td>
+            </tr>
+            <tr>
+                <th style="background-color:#fcc; text-align:center;">
+                    Funktion
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Anheben des Oberarms
+                </td>
+            </tr>
+            <tr>
+                <th style="background-color:#fcc; text-align:center;">
+                    Innervation
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Nervus axillaris des Plexus brachialis
+                </td>
+            </tr>
+            <tr>
+                <th style="background-color:#fcc; text-align:center;">
+                    Spinale Segmente
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    C5, C6
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h1>Musculus deltoideus</h1>
+
+    <p>
+        Der Musculus deltoideus (von altgriechisch δελτοειδής deltoeidḗs, deutsch ‚dreieckartig‘), auch kurz Deltoideus
+        oder Deltamuskel genannt, ist ein dreieckiger Skelettmuskel. Er liegt dem Schultergelenk auf und verleiht ihm
+        Halt, indem er den Kopf des Oberarmknochens in die Gelenkpfanne drückt. Der Musculus deltoideus ist wesentlich
+        an der Kontur der Schulterregion beteiligt und dient der Hebung des Oberarms.
+    </p>
+    <p>
+        Seine Faszie ist die Fascia deltoidea.
+    </p>
+    <div class="artikelUbersichtTitel" id="artikel_ubersicht">
+        Artikel Übersicht
+    </div>
+    <div class="artikelUbersicht">
+        <a aria-label="Anteile" href="#anteile">
+            <div class="artikelUbersichtElement">Anteile</div>
+        </a>
+        <a aria-label="Funktion" href="#funktion">
+            <div class="artikelUbersichtElement">Funktion</div>
+        </a>
+        <a aria-label="Klinik" href="#klinik">
+            <div class="artikelUbersichtElement">Klinik</div>
+        </a>
+    </div>
+
+    <h2 id="anteile">Anteile</h2>
+    <p>
+        Der Deltamuskel lässt sich beim Menschen in drei Teile untergliedern:
+    </p>
+    <ul>
+        <li>
+            Pars clavicularis (Schlüsselbeinteil; „vorderer Deltamuskel“)
+        </li>
+        <li>
+            Pars acromialis (Schulterhöhenteil; „mittlerer Deltamuskel“)
+        </li>
+        <li>
+            Pars spinalis (Grätenteil; „hinterer Deltamuskel“)
+        </li>
+    </ul>
+    <p>
+        Bei vielen Säugetieren ist das Schlüsselbein zurückgebildet und daher die Pars clavicularis nicht ausgebildet.
+        Bei Tieren ohne Acromion (z. B. Pferde, Echte Schweine) fehlt auch die Pars acromialis. Die Pars spinalis wird
+        in der Veterinäranatomie als Pars scapularis (Schulterblattteil) bezeichnet. Zwischen der Pars acromialis und
+        dem Musculus infraspinatus liegt bei Hunden und Wiederkäuern ein Schleimbeutel, die Bursa subdeltoidea.
+    </p>
+
+
+    <h2 id="funktion">Funktion</h2>
+    <p>
+        Nach initialer Abduktion des Armes um ca. 10 Grad durch den Musculus supraspinatus zieht der Deltoideus mit
+        seinen mittleren Fasern (pars acromialis) den Arm bis ungefähr 60 Grad nach oben, bevor er aktiv insuffizient
+        wird. Nun erreichen jedoch die gefiederten Anteile (Pars clavicularis und spinalis) ihre benötigte Hubhöhe und
+        können den Arm somit weiter abduzieren und elevieren (über 90 Grad heben). Für das Heben des Armes über die
+        Horizontale (Elevation) ist jedoch eine Rotation des Schulterblattes nötig, da der Arm ansonsten gegen das
+        Schulterdach stößt. Die vorderen Fasern ziehen den Arm zusätzlich nach vorne (Flexion oder Anteversion) und
+        drehen ihn nach innen (medial), die hinteren Fasern hingegen ziehen den Arm nach hinten (Extension oder
+        Retroversion), und drehen ihn nach außen (lateral).
+    </p>
+    <p>
+        Bei den vierfüßigen Säugetieren wirkt der Muskel als Beuger des Schultergelenks.
+    </p>
+
+    <h2 id="klinik">Klinik</h2>
+    <p>
+        Der Musculus deltoideus wird aufgrund seiner Lage (große Entfernung zu Nerven oder Arterien) zur intramuskulären
+        Injektion von Medikamenten genutzt. Bei einer Lähmung des Nervus axillaris fällt der Musculus deltoideus als
+        stärkster Abduktor im Schultergelenk aus, der Musculus supraspinatus kann die Aufgabe nicht mehr übernehmen, und
+        das Anheben des Arms ist stark vermindert.
+    </p>
+</div>
+</body>
+</html>

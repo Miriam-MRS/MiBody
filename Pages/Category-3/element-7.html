@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            scrollbar-color: transparent;
+            scrollbar-track-color: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 3px;
+            height: 2px;
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.234);
+            border-radius: 9999px;
+            position: absolute;
+        }
+
+        ::-webkit-scrollbar-track:hover {
+            box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.42);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.733);
+            border-radius: 9999px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #000000;
+        }
+
+        .artikelUbersicht {
+            width: 98%;
+        }
+
+        .artikelUbersichtElement {
+            border-top-width: 2px;
+            border-top-style: solid;
+            border-top-color: rgba(0, 0, 0, 0.63);
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: rgba(0, 0, 0, 0.63);
+            width: 98%;
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        .artikelUbersichtTitel {
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: rgba(0, 0, 0, 0.63);
+            width: 96%;
+            padding: 5px;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.63);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .artikelUbersicht:hover {
+            background-color: rgba(107, 168, 159, 0.13);
+        }
+
+        .artikelUbersichtElement:hover {
+            background-color: rgba(129, 103, 103, 0.08);
+        }
+
+        a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.63);
+            font-weight: bold;
+        }
+
+        p {
+            text-align: justify;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Der Darm</h1>
+<p>
+    Der <b>Darm</b> ist der Teil des Verdauungskanals, in dem die aufgenommene Nahrung – nachdem sie in Mund und Magen
+    zerkleinert und angedaut wurde – weiter verdaut wird. Die dabei anfallenden kleinen Bausteine der Nährstoffe (wie
+    Einfachzucker, Fettsäuren, Aminosäuren) werden ins Blut aufgenommen. Nicht verwertbare Substanzen werden als Stuhl
+    (Kot) ausgeschieden. Lesen Sie alles Wichtige über den Darm: Anatomie, Funktion und wichtige Erkrankungen!
+</p>
+<div class="artikelUbersichtTitel" id="artikel_ubersicht">
+    Artikel Übersicht
+</div>
+<div class="artikelUbersicht">
+    <a aria-label="Was ist der Darm?" href="#was_ist_das_darm">
+        <div class="artikelUbersichtElement">Was ist das Darm?</div>
+    </a>
+    <a aria-label="Welche Funktion hat das Darm?" href="#welche_funktion_hat_das_darm">
+        <div class="artikelUbersichtElement">Welche Funktion hat das Darm?</div>
+    </a>
+    <a aria-label="Wo befindet sich das darm?" href="#wo_befindet_sich_das_darm">
+        <div class="artikelUbersichtElement">Wo befindet sich das Darm?</div>
+    </a>
+    <a aria-label="Welche Probleme kann der Darm verursachen?" href="#welche_probleme_kann_der_darm_verursachen">
+        <div class="artikelUbersichtElement">Welche Probleme kann der Darm verursachen?</div>
+    </a>
+</div>
+
+<h2 id="was_ist_das_darm">Was ist das Darm?</h2>
+<p>
+    Der Darm ist der Hauptteil des Verdauungssystems. Er beginnt am Pylorus (Magenpförtner), führt bis zum After (Anus)
+    und ist in den schlankeren Dünn- und den breiteren Dickdarm unterteilt. Beide weisen ihrerseits mehrere Abschnitte
+    auf.
+</p>
+<h3 id="dünndarmTitel">Dünndarm</h3>
+<p>
+    Der Dünndarm ist der längste Teil des Verdauungskanals. Er reicht vom Magenausgang (Pylorus) bis zum Blinddarm
+    (Zökum), ist stark gewunden und fünf bis sechs Meter lang. Im Dünndarm finden der Endabbau der Nahrung zu kleinen
+    Molekülen und deren Resorption durch die Darmschleimhaut ins Blut statt.
+</p>
+<div id="dünndarm" style="display: none">
+    <h4>Was ist der Dünndarm?</h4>
+    <p>
+        Der Dünndarm beginnt am Magenpförtner (Pylorus) und endet bei der Bauhinschen Klappe, dem Übergang zum Dickdarm.
+        Etwa fünf bis sechs Meter beträgt seine gesamte Länge.
+    </p>
+    <p>
+        Dünndarm-Abschnitte von oben nach unten sind: Zwölffingerdarm (Duodenum), Leerdarm (Jejunum) und Krummdarm
+        (Ileum).
+    </p>
+    <b>> Zwölffingerdarm (Duodenum)</b>
+    <p>
+        Der Zwölffingerdarm ist der erste Abschnitt des Dünndarms. Er beginnt am Magenausgang und geht nach etwa 25 bis
+        30
+        Zentimetern in den Leerdarm (Jejunum) über, den zweiten Dünndarm-Abschnitt. Das Duodenum leistet wichtige
+        Verdauungsarbeit und produziert diverse Hormone. Seinen Namen hat der Zwölffingerdarm von seiner Länge, die etwa
+        der
+        Breite von zwölf Fingern entspricht. Lesen Sie mehr über den Zwölffingerdarm!
+    </p>
+    <div id="zwölffingerdarm" style="display: none">
+        <b><i>Was ist der Zwölffingerdarm?</i></b>
+        <p>
+            Der Zwölffingerdarm (Duodenum) ist der Beginn des Darmsystems und der erste Abschnitt des Dünndarms. Er ist
+            scharf
+            abgegrenzt vom Magenausgang (Pylorus), etwa 25 bis 30 Zentimeter lang und hat die Form eines C, in dessen
+            runder
+            Seite der Kopf der Bauchspeicheldrüse (Pankreas) liegt.
+        </p>
+        <b><i>Die Abschnitte des Zwölffingerdarms</i></b>
+        <p>
+            Der Anfangsbereich des Duodenums ist der etwa fünf Zentimeter lange und waagrecht verlaufende Schenkel (Pars
+            superior). Er hat einen erweiterten Beginn und innen eine nahezu glatte Oberfläche.
+        </p>
+        <p>
+            Dann folgt der absteigende Schenkel (Pars descendens) des Zwölffingerdarms, dessen innere Oberfläche durch
+            zahlreiche Falten (Kerckring Falten) vergrößert ist und die sogenannten Brunner-Drüsen (Duodenaldrüsen)
+            enthält.
+            In
+            diesem Bereich münden auch die Ausführungsgänge der großen Verdauungsdrüsen in den Zwölffingerdarm: der
+            Haupt-Gallengang (der die Galle von der Leber beziehungsweise Gallenblase zum Duodenum leitet) sowie der
+            Bauchspeicheldrüsengang, der das Pankreassekret herantransportiert.
+        </p>
+        <b><i>Welche Funktion hat der Zwölffingerdarm?</i></b>
+        <p>
+            Die Zwölffingerdarm-Funktion besteht in der Fortsetzung des in Mund und Magen begonnenen Verdauungsvorgangs
+            und
+            in
+            der Bildung bestimmter Hormone.
+        </p>
+        <b><i>Beteiligung an der Verdauung</i></b>
+        <p>
+            Die im Zwölffingerdarm arbeitenden Verdauungsenzyme stammen aus der Bauchspeicheldrüse und den
+            Duodenaldrüsen.
+        </p>
+        <p>
+            Beide Drüsensekrete enthalten neben Verdauungsenzymen auch Bikarbonat: Es erhöht den pH-Wert des
+            Speisebreis,
+            der -
+            wenn er aus dem Magen in den Zwölffingerdarm eintritt - stark sauer ist. Damit die Enzyme aktiv werden
+            können,
+            muss
+            der Säuregrad durch Bikarbonat verringert werden.
+        </p>
+        <p>
+            Auch die in den Zwölffingerdarm eingeleitete Galle ist wichtig für die Verdauung: Die enthaltenen
+            Gallensäuren
+            sind
+            für die Fettverdauung notwendig.
+        </p>
+        <b><i>Hormonproduktion</i></b>
+        <p>
+            Im Duodenum werden auch verschiedene Enterohormone (= im Verdauungstrakt produzierte Hormone) gebildet und
+            sezerniert:
+        </p>
+        <ul>
+            <li>Gastrin: Dieses auch im Magen produzierte Hormon stimuliert die Bildung und Ausschüttung von Magensäure
+                und
+                Pankreassekret.
+            </li>
+            <li>Sekretin: Es wird im Zwölffingerdarm und im darauffolgenden Leerdarm (Jejunum) gebildet und regt die
+                Bikarbonatproduktion an.
+            </li>
+            <li>Cholezystokinin: Auch dieses Hormon wird in den ersten beiden Dünndarm-Abschnitten (Zwölffingerdarm und
+                Leerdarm) produziert. Es fördert die Ausschüttung von Pankreasenzymen und Gallensäuren für die
+                Fettverdauung.
+            </li>
+        </ul>
+        <b><i>Welche Probleme kann der Zwölffingerdarm verursachen?</i></b>
+        <p>
+            Als Megaduodenum bezeichnen Mediziner eine dauerhafte Erweiterung des Duodenums, die angeboren oder erworben
+            sein
+            kann.
+        </p>
+        <p>
+            Duodenaldivertikel sind Ausstülpungen der Darmwand im Bereich des Zwölffingerdarms. Sie finden sich fast
+            immer
+            an
+            der inneren Seite der Krümmung und machen nur selten Beschwerden.
+        </p>
+        <p>
+            Eine Entzündung des Duodenums (Duodenitis) kann zu einem Duodenalgeschwür (Ulcus duodeni,
+            Zwölffingerdarmgeschwür)
+            führen.
+        </p>
+        <p>
+            Die Passage durch den Zwölffingerdarm kann durch eine angeborene oder erworbene Verengung beeinträchtigt
+            sein.
+            Mediziner sprechen hier von einer Duodenalstenose.
+        </p>
+    </div>
+    <a href="#zwölffingerdarm" id="zwölffingerdarmToggle"
+       onclick="toggleDisplay('zwölffingerdarm','zwölffingerdarmToggle')">Lesen Sie mehr</a>
+    <br><br>
+
+    <b>> Leerdarm (Jejunum)</b>
+    <p>
+        Das Jejunum (Leerdarm) ist der mittlere Abschnitt des Dünndarms zwischen Duodenum (Zwölffingerdarm) und Ileum
+        (Krummdarm). Er macht etwa zwei Drittel der Länge des gesamten Dünndarms aus. Im Jejunum werden Nährstoffe und
+        Wasser aus dem Nahrungsbrei resorbiert. Der Rest wird weiter ins Ileum transportiert. Lesen Sie alles Wichtige
+        über
+        das Jejunum!
+    </p>
+    <div id="leerdarm" style="display: none">
+        <b><i>Was ist das Jejunum?</i></b>
+        <p>
+            Das Jejunum, der Leerdarm, ist der mittlere Teil des Dünndarms, liegt also zwischen dem Duodenum und dem
+            Ileum.
+            Zu letzterem besteht keine klare Abgrenzung. Beide zusammen (Jejunum und Ileum) werden auch Dünndarmkonvolut
+            genannt.
+        </p>
+        <p>
+            Das Jejunum beginnt auf Höhe des zweiten Lendenwirbelkörpers und ist etwa zwei bis zweieinhalb Meter lang.
+            Es
+            ist ebenso wie das Ileum durch eine Bauchfellduplikatur, das so genannte Gekröse (Mesenterium), an der
+            hinteren
+            Bauchwand aufgehängt und bildet zahlreiche frei bewegliche Schlingen.
+        </p>
+        <p>
+            Die Wand des Leerdarms besteht aus einer doppelten Schicht Muskulatur, die innen von Schleimhaut und außen
+            vom
+            Bauchfell bedeckt ist. Die Schleimhaut weist sehr viele Kerckring-Falten und Lieberkühn-Drüsen auf. Die
+            Kerckring-Falten sind quer verlaufende Schleimhautfalten, welche die innere Oberfläche des Leerdarms stark
+            vergrößern. Das steigert seine Resorptionsleistung.
+        </p>
+        <p>
+            Die Lieberkühn-Drüsen sind schlauchförmige Einsenkungen in der Wand des Dünndarms. Sie dienen wie die
+            Kerckring-Falten zum einen der Oberflächenvergrößerung. Zum anderen sezernieren sie Enzyme, die für die
+            Verdauung wichtig sind.
+        </p>
+        <p>
+            Dünndarmzotten (fingerförmige Ausstülpungen der Darmwand) sowie die winzigen, fadenförmigen Fortsätze an der
+            Zelloberfläche des Wandepithels (Mikrovilli) vergrößern die innere Oberfläche des Jejunums zusätzlich.
+        </p>
+        <b><i>Woher stammt der Name Leerdarm?</i></b>
+        <p>
+            Die deutsche Bezeichnung Leerdarm kommt daher, dass dieser Dünndarmabschnitt bei Verstorbenen in der Regel
+            leer
+            ist.
+        </p>
+        <b><i>Welche Funktion hat das Jejunum?</i></b>
+        <p>
+            Im Jejunum setzt sich die enzymatische Aufspaltung der Nahrungsbestandteile, die schon in oberen Abschnitten
+            des
+            Verdauungstraktes begonnen hat, fort. Die dabei entstehenden Bausteine der Hauptnährstoffe (Einfachzucker,
+            Aminosäure, Fettsäuren etc.) sowie Wasser, Vitamine und Elektrolyte werden ins Blut aufgenommen
+            (Resorption).
+        </p>
+        <p>
+            Neben der Resorptionsfunktion hat der Leerdarm noch eine Drüsenfunktion: Die Becherzellen in der
+            Darmschleimhaut
+            produzieren einen Schleim, der die gesamte innere Oberfläche überzieht und so die Schleimhaut vor
+            Selbstverdauung durch die Säure aus dem Magen schützt.
+        </p>
+        <p>
+            Eine weitere wichtige Funktion erfüllt die muskuläre Wand des Jejunums:
+        </p>
+        <ul>
+            <li>Segmentationsbewegungen unterteilen den Nahrungsbrei durch Abschnürung in kleinere Portionen</li>
+            <li>
+                Pendelbewegungen durchmischen den Darminhalt, indem sie ihn hin- und herbewegen, sodass er gleichmäßig
+                mit
+                den Verdauungssäften in Kontakt kommt
+            </li>
+            <li>Peristaltischen Bewegungen der Jejunum-Wand transportieren den Darminhalt weiter in Richtung Ileum</li>
+        </ul>
+        <b><i>Welche Probleme kann das Jejunum verursachen?</i></b>
+        <p>
+            Isolierte Krankheiten des Leerdarms sind selten. In den meisten Fällen ist der gesamte Dünndarm betroffen,
+            so
+            etwa bei einer Dünndarmentzündung (Enteritis) oder einem akuten Verschluss der den Dünndarm versorgenden
+            Arterie
+            (Mesenterialarterien-Infarkt).
+        </p>
+        <p>
+            Die chronisch-entzündliche Darmerkrankung (CED) Morbus Crohn kann neben dem Dickdarm auch den Dünndarm
+            betreffen. Dagegen beschränkt sich die Colitis ulcerosa – ebenfalls eine CED – auf den Dickdarm.
+        </p>
+        <p>
+            Bei der genetisch bedingten Unverträglichkeit gegenüber Gluten (Kleber-Eiweiß im Getreide) wird die
+            Schleimhaut
+            im Dünndarm (auch im Jejunum) durch eine Fehlreaktion des Immunsystems geschädigt, was die
+            Nährstoff-Resorption
+            beeinträchtigt.
+        </p>
+    </div>
+    <a href="#leerdarm" id="leerdarmToggle"
+       onclick="toggleDisplay('leerdarm','leerdarmToggle')">Lesen Sie mehr</a>
+    <br><br>
+
+    <b>> Krummdarm (Ileum)</b>
+    <p>
+        Das Ileum (Krummdarm) ist der letzte Abschnitt des Dünndarms nach dem Jejunum (Leerdarm). Mit einer Länge von
+        etwa
+        drei Metern macht er drei Fünftel des gesamten Dünndarms aus. Im Ileum finden – wie im übrigen Dünndarm –
+        Verdauungsvorgänge statt und zudem die Resorption von Wasser und Gallensäuren. Lesen Sie alles über das Ileum!
+    </p>
+    <div id="krummdarm" style="display: none">
+        <b><i>Was ist das Ileum?</i></b>
+        <p>
+            Das Ileum (Krummdarm) umfasst etwa die letzten drei Meter des insgesamt fünf bis sechs Meter langen
+            Dünndarms.
+            Es beginnt im Anschluss an das Jejunum (Leerdarm), dem gegenüber es aber nicht deutlich abgegrenzt ist.
+        </p>
+        <p>
+            Das Ileum ist – genau wie das Jejunum – mit dem Gekröse (Mesenterium) an der hinteren Bauchwand befestigt
+            und
+            windet sich in zahlreichen frei beweglichen Schlingen bis nach rechts unten im Unterbauch. Dort endet der
+            Krummdarm mit der Bauhinschen Klappe, die den Übergang in den Dickdarm darstellt (genauer gesagt in den
+            Blinddarm = Zökum).
+        </p>
+        <p>
+            Die Wand des Krummdarms ist prinzipiell genauso aufgebaut wie die im restlichen Dünndarm. Sie ist allerdings
+            weniger dick und besitzt weniger Schleimhautfalten (Kerckring-Falten) und Zotten – die innere Oberfläche und
+            damit die Resorptionsfläche ist also nicht so stark vergrößert wie im Jejunum. Das ist auch nicht nötig,
+            weil
+            die meisten verwertbaren Nahrungsbestandteile bereits in Duodenum und Jejunum ins Blut aufgenommen werden.
+        </p>
+        <p>
+            Dafür besitzt das Ileum vermehrt Lymphfollikel (Peyer-Plaques), die mit der Nahrung aufgenommene Keime
+            abwehren
+            sollen.
+        </p>
+        <b><i>Welche Funktion hat das Ileum?</i></b>
+        <p>
+            Das Ileum ist – wie der übrige Dünndarm – an der Resorption der Nährstoffe beteiligt, wenn auch in
+            geringerem
+            Ausmaß. Im Krummdarm werden diejenigen Substanzen, die im Duodenum und im Jejunum nicht resorbiert werden
+            konnten, aufgenommen: Elektrolyte, Vitamine und Spurenelemente.
+        </p>
+        <p>
+            Im terminalen Ileum (die letzten zehn bis 15 Zentimeter des Krummdarms) findet auch die Rückresorption der
+            Gallensäuren statt, die von der Leber produziert und verpackt in der Gallenflüssigkeit in das Duodenum zur
+            Fettverdauung abgegeben wurden. Nach der Rückresorption der Gallensäuren gelangen diese über das Blut wieder
+            in
+            die Leber (enterohepatischer Kreislauf).
+        </p>
+        <p>
+            Außerdem wird im terminalen Ileum Cobalamin (Vitamin B12) aus der Nahrung resorbiert.
+        </p>
+        <p>
+            Im Ileum wird auch ein Großteil des Wasser, das mit der Nahrung aufgenommen wird, sowie aller
+            Verdauungssekrete,
+            die in den Magen und Dünndarm sezerniert werden, resorbiert. Der Rest wird im Dickdarm aufgenommen.
+        </p>
+        <b><i>Welche Probleme kann das Ileum verursachen?</i></b>
+        <p>
+            Morbus Crohn ist eine chronisch-entzündliche Darmerkrankung, die sowohl im Dickdarm als auch im Dünndarm
+            auftreten kann. Bei zirka 30 Prozent der Erkrankten ist nur das Ileum betroffen.
+        </p>
+        <p>
+            Bei einem Darmverschluss kann der Nahrungsbrei im Darm nicht mehr weitertransportiert werden – entweder
+            aufgrund
+            eines mechanischen Hindernisses (mechanischer Ileus) oder einer Darmlähmung (paralytischer Ileus). Etwa zwei
+            Drittel aller Darmverschlüsse betreffen den Dünndarm.
+        </p>
+        <p>
+            Als Zöliakie bezeichnet man eine genetisch bedingte Unverträglichkeit gegenüber Gluten, dem Kleber-Eiweiß im
+            Getreide. Das Immunsystem der Betroffenen reagiert überempfindlich auf Gluten mit chronischer Entzündung und
+            Zerstörung der Zotten im Dünndarm.
+        </p>
+        <p>
+            Ein Vitamin-B12-Mangel kann Blutarmut verursachen (perniziöse Anämie). Er entsteht durch eine
+            Resorptionsstörung
+            im terminalen Ileum, die durch Entzündungen oder Medikamente hervorgerufen werden kann.
+        </p>
+    </div>
+    <a href="#krummdarm" id="krummdarmToggle"
+       onclick="toggleDisplay('krummdarm','krummdarmToggle')">Lesen Sie mehr</a>
+    <br><br>
+
+    <b>Dünndarmwand</b>
+    <p>
+        Die Wand des Dünndarms ist von innen nach außen aus verschiedenen Schichten aufgebaut.
+    </p>
+    <ul>
+        <li>
+            Ganz innen liegt die Schleimhaut, gefolgt von einer Verschiebeschicht aus lockerem Bindegewebe mit Blut- und
+            Lymphgefäßen sowie einem Nervengeflecht.
+        </li>
+        <li>
+            Dann schließt sich eine zweiteilige Muskelschicht an (Ringmuskelschicht, Längsmuskelschicht). Ihre
+            wellenartigen
+            Bewegungen und Kontraktionen sorgen für die Durchmischung und den Weitertransport des Speisebreis.
+        </li>
+        <li>
+            Auf die Muskelschicht folgen nach außen wieder eine Verschiebeschicht und dann ein Überzug aus Bauchfell.
+        </li>
+    </ul>
+    <b>Dünndarmschleimhaut</b>
+    <p>
+        Anfangs hat der Zwölffingerdarm noch eine glatte innere Oberfläche. In den weiteren Bereichen und im Jejunum
+        verändert sich der Dünndarm-Aufbau - die innere Oberfläche vergrößert sich durch Falten (Kerckring-Falten),
+        fingerförmige Ausstülpungen (Zotten), Einsenkungen (Krypten) und den Bürstensaum (Mikrovilli: feine Fortsätze
+        auf
+        der Oberfläche des Wandepithels). Diese starke Vergrößerung der inneren Oberfläche steigert deutlich die
+        Resorptionsfähigkeit für Nährstoffe und Wasser.
+    </p>
+    <p>
+        Die Kerckring-Falten im Jejunum sind niedriger als im Duodenum und im weiteren Verlauf werden sie seltener. Im
+        Ileum
+        finden sich kaum noch Falten, dafür aber zunehmend Anhäufungen von lymphatischem Gewebe (Peyer Plaques) zur
+        Immunabwehr.
+    </p>
+    <h4>Welche Funktion hat der Dünndarm?</h4>
+    <p>
+        Die Dünndarm-Funktion besteht zunächst in der chemischen Verdauung des Nahrungsbreis. Die bei der Zerlegung von
+        Kohlenhydraten, Fetten und Eiweißen entstehenden kleinen Moleküle (Einfachzucker, Fettsäuren, Aminosäuren etc.)
+        werden dann über die Dünndarmwand ins Blut resorbiert. Auch Vitamine werden über Carrier und Rezeptoren an der
+        inneren Darmoberfläche ins Blut aufgenommen.
+    </p>
+    <p>
+        Außerdem werden im Dünndarm täglich etwa acht bis neun Liter Wasser mit 50 bis 100 Gramm Elektrolyten
+        resorbiert.
+        Nur etwa 1,5 Liter davon kommen aus der Nahrung. Etwa einen Liter macht verschluckter Speichel aus. 1,5 Liter
+        bestehen aus Magensaft, drei Liter aus Drüsensekreten des Dünndarms, zwei Liter aus Pankreassaft und etwa 0,6
+        Liter
+        aus Galle.
+    </p>
+    <p>
+        Die Galle wird in der Leber gebildet und in den Zwölffingerdarm geleitet. Sie enthält unter anderem Gallensäuren
+        für
+        die Fettverdauung. Am Ende des Dünndarms werden die Gallensäuren größtenteils wieder ins Blut aufgenommen und
+        zurück
+        zur Leber transportiert (enterohepatischer Kreislauf).
+    </p>
+    <p>
+        Die Schleimhaut im Zwölffingerdarm enthält zahlreiche Drüsen (Brunner-Drüsen). Diese sezernieren
+        Hydrogenkarbonat,
+        das den aus dem Magen kommenden sauren Nahrungsbrei neutralisiert. Nur dann können die Verdauungsenzyme im
+        Dünndarm
+        aktiv werden. Diese Enzyme werden von der Bauchspeicheldrüse und den Brunner-Drüsen bereitgestellt.
+    </p>
+
+    <h4>Welche Probleme kann der Dünndarm verursachen?</h4>
+    <p>
+        Morbus Crohn ist eine chronisch-entzündliche Erkrankung, die den gesamten Verdauungstrakt (von der Mundhöhle bis
+        zum
+        After) betreffen kann. Am häufigsten befällt die Erkrankung den letzten Teil des Dünndarms (Ileum).
+    </p>
+    <p>
+        Divertikel sind Ausstülpungen der Darmwand, die meist ohne Symptome bleiben. Sie können sich aber entzünden
+        (Divertikulitis) oder zu bluten beginnen und schwere Komplikationen verursachen.
+    </p>
+    <p>
+        Bei einem Ulcus duodeni (Zwölffingerdarmgeschwür) ist ein Schleimhautbereich im Duodenum dauerhaft entzündet und
+        geschädigt. Mögliche Ursachen dafür sind etwa eine Infektion mit dem Bakterium Helicobacter pylori oder die
+        Einnahme
+        von bestimmten Schmerzmitteln und Rheumamedikamenten (Acetylsalicylsäure, Ibuprofen, Diclofenac etc.).
+    </p>
+    <p>
+        Bei Zöliakie reagiert das Immunsystem überempfindlich auf das Kleber-Eiweiß Gluten (enthalten in Getreide): Die
+        Dünndarm-Schleimhaut wird geschädigt, was die Nährstoff-Aufnahme behindert.
+    </p>
+</div>
+<a href="#dünndarmTitel" id="dünndarmToggle"
+   onclick="toggleDisplay('dünndarm','dünndarmToggle')">Lesen Sie mehr</a>
+<br><br>
+<h3 id="dickdarmTitel">Dickdarm</h3>
+<p>
+    Der Dickdarm beginnt am Ende des Ileums (letzter Dünndarm-Abschnitt) mit der Bauhin-Klappe, windet sich wie ein
+    Rahmen um den gesamten Dünndarm herum und endet mit dem After (Anus). Im Dickdarm finden die Resorption von Wasser
+    und Elektrolyten und die Umwandlung des Darminhalts in Stuhl (Fäzes) statt. Lesen Sie alles Wichtige über den
+    Dickdarm!
+</p>
+<div id="dickdarm" style="display: none">
+    <h4>Was ist der Dickdarm?</h4>
+    <p>
+        Die Bauhinsche Klappe markiert den Beginn des Dickdarms im rechten Unterbauch. Sie sitzt am Übergang zum letzten
+        Dünndarm-Abschnitt (Ileum) und verhindert, dass Darminhalt aus dem Dickdarm zurück in das Ileum gepresst wird.
+    </p>
+    <p>
+        Der Dickdarm führt zuerst nach oben (bis zur Unterseite der Leber), verläuft dann quer bis zur linken Seite des
+        Rumpfes, steigt dann ab und führt schließlich zum After. Die gesamte Dickdarm-Länge beträgt etwa einen Meter.
+    </p>
+    <p>
+        Der Dickdarm wird in seinem Verlauf in mehrere Abschnitte unterteilt: Blinddarm mit Wurmfortsatz, Grimmdarm
+        (Kolon) sowie End- oder Mastdarm (Rektum).
+    </p>
+    <b id="wurmfortsatzTitel">> Blinddarm mit Wurmfortsatz</b>
+    <p>
+        Der Wurmfortsatz (Appendix vermiformis) ist ein Anhangsgebilde des Blinddarms (Zäkum oder Zökum).
+        Fälschlicherweise wird der Wurmfortsatz selbst manchmal als Blinddarm und seine Entzündung als
+        Blinddarm-Entzündung (Appendizitis) bezeichnet. Seine Hauptfunktion liegt in der frühen Kindheit in der
+        Immunabwehr. Lesen Sie alles Wichtige über den Appendix: Wie sieht er aus? Welche Funktion hat er? Auf welcher
+        Seite ist der Blinddarm mit seinem Wurmfortsatz?
+    </p>
+    <div id="wurmfortsatz" style="display:none;">
+        <b><i>Wurmfortsatz: Anhängsel des Blinddarms</i></b>
+        <p>
+            Der Wurmfortsatz (Appendix vermiformis) ist ein wurmförmger, dünner Anhang am unteren Ende des Blinddarms
+            (Zäkum oder Zökum). Er ist meist zwischen zwei und 20 Zentimeter lang (in Einzelfällen auch bis zu 30
+            Zentimeter) und hat einen engen Durchmesser von etwa sechs Millimetern. Zwischen Blinddarm und Appendix
+            liegt eine klappenförmige Schleimhautfalte, die Gerlach-Klappe.
+        </p>
+        <p>
+            Der Wurmfortsatz kann teilweise oder auch vollständig verschlossen sein, Schleim oder auch Darminhalt
+            enthalten. Er ist mit einer kleinen, dreieckigen Bauchfellduplikatur (Mesenteriolum) beweglich zwischen dem
+            Ende des Ileums (Krummdarm) und dem Zökum aufgehängt.
+        </p>
+        <b><i>Wo liegt der Blinddarm mit dem Wurmfortsatz?</i></b>
+        <p>
+            Auch wenn bei einer Appendizitis die krampfartigen Schmerzen anfangs in der Nabelregion lokalisiert sind –
+            im rechten Unterbauch und nicht in der Bauchmitte befindet sich der Blinddarm. Lage des Wurmfortsatzes ist
+            variabel: Er kann über das Zökum bis in das kleine Becken rechts unten reichen. Das kann bei Frauen wegen
+            der engen Nachbarschaft zu Eierstöcken und Eileiter Probleme bereiten: Eine Blinddarm-Entzündung lässt sich
+            dann oft schwer gegen eine Eierstock- oder Eileiterentzündung abgrenzen.
+        </p>
+        <p>
+            Selten ist der Wurmfortsatz nach oben geschlagen, wobei er vor oder neben dem Blinddarm liegen kann. Relativ
+            häufig liegt er auch hinter dem Zäkum.
+        </p>
+        <p>
+            In der zweiten Hälfte der Schwangerschaft können der Blinddarm und der Appendix durch die vergrößerte
+            Gebärmutter stark verlagert sein.
+        </p>
+        <b><i>Welche Funktion hat der Wurmfortsatz?</i></b>
+        <p>
+            Die innere Schleimhaut des Wurmfortsatzes enthält zahlreiche Lymphfollikel zur Immunabwehr, man nennt ihn
+            deshalb auch „Darmtonsille“. Bei Durchfallerkrankungen können im Appendix nützliche Bakterien überleben und
+            von da aus wieder den gesamten Dickdarm besiedeln. Diese Blinddarm-Funktion (eigentlich
+            Wurmfortsatz-Funktion) ist besonders in Ländern mit schlechten hygienischen Verhältnissen von Bedeutung.
+        </p>
+        <b><i>Welche Probleme kann der Wurmfortsatz verursachen?</i></b>
+        <p>
+            Bei einer Blinddarm-Entzündung handelt es sich genau genommen um eine Wurmfortsatz-Entzündung
+            (Appendizitis). Sie ist die häufigste Erkrankung im Bauchraum und betrifft vor allem Kinder zwischen 10 und
+            15 Jahren – Jungen häufiger als Mädchen. Bei kleinen Kindern und älteren Menschen tritt die Appendizitis
+            selten auf.
+        </p>
+        <p>
+            Häufig entwickelt sich die Entzündung, weil der Appendix mit Kotsteinen verstopft oder abgeknickt ist. Oft
+            steckt auch ein Darminfekt dahinter. Ein entzündeter Wurmfortsatz wird in der Regel operativ entfernt.
+        </p>
+    </div>
+    <a href="#wurmfortsatzTitel" id="wurmfortsatzToggle"
+       onclick="toggleDisplay('wurmfortsatz','wurmfortsatzToggle')">Lesen Sie mehr</a>
+    <br><br>
+    <b>> Grimmdarm (Kolon)</b>
+    <p>
+        Auf den Blinddarm folgt der Grimmdarm oder Kolon (Colon). Er gliedert sich in mehrere Äste: einen aufsteigenden
+        Ast (Colon ascendens), einen querverlaufenden Ast (Colon transversum), einen absteigenden Ast (Colon descendens)
+        und einen S-förmigen Ast (Sigma-Darm).
+    </p>
+    <b id="rektumTitel">> End- oder Mastdarm (Rektum)</b>
+    <p>
+        Das Rektum, auch Mastdarm oder Enddarm genannt, ist der letzte Abschnitt des Dickdarms. Es mündet über den After
+        (Anus) nach außen. Trotz seines Namens ist das Rektum (lat. rectus = gerade) keineswegs gerade, sondern verläuft
+        in zwei Krümmungen. Es dient als Kotspeicher und sorgt mit dem inneren Schließmuskel für die Kontinenz. Lesen
+        Sie alles Wichtige über das Rektum!
+    </p>
+    <div id="rektum" style="display: none">
+        <b><i>Was ist das Rektum?</i></b>
+        <p>
+            Das Rektum (Mastdarm oder Enddarm) ist der letzte Abschnitt des Dickdarms. Er ist etwa 12 bis 15 Zentimeter
+            lang und beginnt ungefähr in Höhe des 3. Kreuzbeinwirbels im kleinen Becken – dies ist die engste Stelle des
+            Dickdarms.
+        </p>
+        <p>
+            Das Rektum verläuft in zwei Krümmungen: Eine weist nach hinten in Richtung Wirbelsäule, die andere nach
+            vorne.
+            Außerdem finden sich am Mastdarm Einschnürungen an beiden Seiten mit Ausbuchtungen dazwischen.
+        </p>
+        <p>
+            Im Inneren besitzt das Rektum drei halbmondförmige Querfalten. Die mittlere Falte ist die größte und wird
+            Kohlrausch-Falte genannt. Sie liegt etwa sechs bis acht Zentimeter oberhalb des Afters und bei Männern auf
+            der
+            Höhe der Prostata. Eine ärztliche Untersuchung des Enddarms mit dem Finger (Digitaluntersuchung) ist bis zu
+            dieser Querfalte möglich.
+        </p>
+        <p>
+            Der obere Bereich des Mastdarms wird Ampulle (Ampulla recti) genannt. Dieser besonders erweiterungsfähiger
+            Darmabschnitt dient als Speicher für den Kot. Er führt über den drei bis vier Zentimeter langen Analkanal
+            (der
+            untere Abschnitt des Rektums) und den After nach außen.
+        </p>
+        <p>
+            Die längs verlaufende Muskelschicht, die in der Wand der anderen Dickdarmabschnitte (Zökum, Kolon) zu
+            Taenien
+            gebündelt ist, bildet im Rektum – ähnlich wie im Dünndarm – einen gleichmäßigen, geschlossenen Muskelmantel.
+        </p>
+        <b><i>Welche Funktion hat das Rektum?</i></b>
+        <p>
+            Die Mastdarm-Funktion liegt in der Speicherung des Stuhls in der Ampulle. Hier kann der Darminhalt über 16
+            bis 20 Stunden gespeichert werden. Der untere Teil der Ampulle bleibt geschlossen bis zur Stuhlentleerung
+            (Defäkation), die willentlich und zeitlich steuerbar ist. Ist die Ampulle mit Kot gefüllt, tritt Stuhldrang
+            auf. Dieser kann willentlich unterdrückt werden.
+        </p>
+        <p>
+            Die Schließmuskeln in Analkanal (Sphinkterapparat) sorgen für die Kontinenz. Es zählen dazu zwei wichtige
+            Ringmuskeln:
+        </p>
+        <ul>
+            <li>
+                der innere Schließmuskel: besteht aus glatter Muskulatur und arbeitet unwillkürlich
+            </li>
+            <li>
+                der äußere Schließmuskel: besteht aus quergestreifter Muskulatur und arbeitet willkürlich
+            </li>
+        </ul>
+        <p>
+            Noch weitere Muskeln sind wichtig für die Kontinenz, zum Beispiel die Muskeln des Beckenbodens.
+        </p>
+        <b><i>Wo liegt das Rektum?</i></b>
+        <p>
+            Das Rektum liegt im kleinen Becken. Es ist im oberen Abschnitt fest mit der Hinterwand des Rumpfes
+            verwachsen. Nach hinten grenzt der Enddarm an das Kreuzbein, das Steißbein und die hinteren Abschnitte des
+            Muskels, die den Beckenausgang verschließen. Nach vorne grenzt das Rektum beim Mann an die Prostata, die
+            Bläschendrüsen, die Samenleiter und den dazwischen liegenden Bereich der Harnblase. Bei der Frau liegt die
+            Gebärmutter dem Rektum auf, und Muskelbündel strahlen von der Rückseite des Gebärmutterhalses zum Mastdarm
+            aus. Die Scheide liegt hinten unten dem Rektum an.
+        </p>
+        <b><i>Welche Probleme kann das Rektum verursachen?</i></b>
+        <p>
+            Mastdarmkrebs (Rektum-Karzinom) macht sich oft erst im fortgeschrittenen Stadium durch Beschwerden
+            bemerkbar. Er kann zum Beispiel zu Bauchschmerzen, Blutbeimengungen im Stuhl und einem Wechsel zwischen
+            Verstopfung und Durchfall führen.
+        </p>
+        <p>
+            Eine Entzündung des Enddarms wird Proktitis genannt. Es gibt auch eine chronische Darmentzündung, die sich
+            auf
+            das Rektum erstrecken kann – Morbus Crohn.
+        </p>
+        <p>
+            Verstopfung (Obstipation) kann ihre Ursache in einem gestörten Entleerungsreflex haben.
+        </p>
+        <p>
+            Eine Schwäche des Beckenbodens (Insuffizienz) kann zu einem Rektumprolaps führen, wobei sich das Rektum nach
+            der
+            Defäkation aus der Analöffnung vorstülpt.
+        </p>
+    </div>
+    <a href="#rektumTitel" id="rektumToggle"
+       onclick="toggleDisplay('rektum','rektumToggle')">Lesen Sie mehr</a>
+    <br><br>
+    <b id="anusTitel">Anus</b>
+    <p>
+        Der Anus (After, Analkanal) bildet das Ende des Mastdarms. Über ihn findet die Stuhlentleerung (Defäkation)
+        statt. Störungen im Bereich des Analkanals führen für Betroffene zu schweren Beeinträchtigungen. Lesen Sie alles
+        Wichtige über den Anus!
+    </p>
+    <div id="anus" style="display: none">
+        <b><i>Was ist der Anus?</i></b>
+        <p>
+            Der Anus, auch Analkanal genannt, ist das unterste Ende des Mastdarms (Rektum). Er ist von oben nach unten
+            in drei Bereiche untergliedert:
+        </p>
+        <p>
+            Zona columnaris: Die Schleimhaut weist hier sechs bis acht längs verlaufende Aftersäulen mit Einbuchtungen
+            dazwischen auf. Unter der Schleimhaut liegt ein Gefäßpolster (Corpus cavernosum recti), das durch
+            Blutfüllung bewirkt, dass sich die Aftersäulen aneinanderlagern. Das verschließt den Analkanal, trägt also
+            zur Kontinenz bei. Bei einer krankhaften, knotenartigen Erweiterung des Gefößpolsters spricht man von
+            „inneren Hämorrhoiden“.
+        </p>
+        <p>
+            Zona intermedia: Sie wird auch Zona alba genannt wegen der hell erscheinenden Schleimhaut. Das hier
+            befindliche Venengeflecht bildet bei krankhafter Aufweitung die sogenannten „äußeren Hämorrhoiden“.
+        </p>
+        <p>
+            Zona cutanea: Sie grenzt an den äußeren Schließmuskel und ähnelt der Haut durch stärkere Pigmentierung sowie
+            Talg- und Schweißdrüsen.
+        </p>
+        <b><i>Die Schließmuskeln am Anus</i></b>
+        <p>
+            Die Ringmuskelschicht der Dickdarmwand ist im Anus zum starken inneren Schließmuskel verstärkt, der
+            unwillkürlich arbeitet – er lässt sich also nicht willentlich beeinflussen. Über diesem liegt der äußere
+            Schließmuskel, der willkürlich beeinflussbar ist.
+        </p>
+        <p>
+            Die beiden Schließmuskeln zusammen haben einen starken Tonus, den man spüren kann, wenn man versucht, ein
+            Zäpfchen einzuführen oder wenn der Arzt eine rektale Untersuchung durchführen will. Als Ergänzung zu dem
+            muskulären Verschluss kommt das Venengeflecht der Zona haemorrhoidalis dazu, dessen Füllung den dichten
+            Verschluss garantiert.
+        </p>
+        <b><i>Welche Funktion hat der Anus?</i></b>
+        <p>
+            Der Analkanal dient der Darmentleerung (Defäkation), die ein komplexes Geschehen ist. Die Peristaltik der
+            muskulären Wand des Kolons (der vorgeschaltete Dickdarm-Abschnitt) transportiert den Kot ins den Mastdarm.
+            Dessen Füllung führt zu einer Erschlaffung des inneren Schließmuskels und einer verstärkten Kontraktion des
+            äußeren Schließmuskels. Stuhldrang macht sich bemerkbar, der sich aber unterdrücken lässt, indem man den
+            äußeren Schließmuskel bewusst in Kontraktion hält.
+        </p>
+        <p>
+            Wenn man ihn hingegen bewusst entspannt, kommt es zur Stuhlentleerung, vorangetrieben durchperistaltische
+            Kontraktionen des Kolons und des Rektums. Eine Anspannung der Bauchmuskulatur kann die Stuhlentleerung noch
+            fördern.
+        </p>
+        <b><i>Welche Probleme kann der Anus verursachen?</i></b>
+        <p>
+            Eine Perianalthrombose ist eine Venenthrombose am Außenrand des Afters. Betroffen sind die Venen des
+            Schließapparats, die durch den Thrombus einen geröteten Knoten am Afterrand bilden.
+        </p>
+        <p>
+            Hämorrhoiden (genauer gesagt: ein Hämorrhoidalleiden) können sich zum Beispiel durch hellrote Blutspuren auf
+            dem Kot oder Toilettenpapier bemerkbar machen.
+        </p>
+        <p>
+            Ein Analabszess ist eine akute, abgekapselte, eitrige Entzündung um den Anus, verursacht durch bakterielle
+            Infektionen der Analdrüsen. Bei einer Analfistel hat sich die Entzündung vom Analkanal aus durch den Körper
+            einen röhrenförmigen Gang nach außen gebahnt, durch den Sekret und Eiter abfließen.
+        </p>
+        <p>
+            Bei einer Analfissur ist die Haut im Analkanal eingerissen, zum Beispiel durch harten Stuhl oder häufige
+            Durchfälle.
+        </p>
+        <p>
+            Bei einem Analprolaps wölbt sich der Analkanal bei starkem Pressen während der Stuhlentleerung Toilette nach
+            außen.
+        </p>
+        <p>
+            Selten treten im Anus-Bereich bösartige Tumoren (Karzinome) auf.
+        </p>
+    </div>
+    <a href="#anusTitel" id="anusToggle"
+       onclick="toggleDisplay('anus','anusToggle')">Lesen Sie mehr</a>
+    <br><br>
+    <b>Dickdarmwand</b>
+    <p>
+        Die Dickdarmwand ist relativ glatt und nicht durch Falten oder Zotten vergrößert wie die Dünndarmwand. Die
+        Längsmuskelschicht in der Dickdarmwand ist zu durchlaufenden Streifen (Taenien) gebündelt, welche die Wand
+        stabilisieren und die Peristaltik unterstützen.
+    </p>
+    <b>Welche Funktion hat der Dickdarm?</b>
+    <p>
+        Im Dickdarm findet im Gegensatz zum Dünndarm keine Verdauung mehr statt. Stattdessen besteht die
+        Dickdarm-Funktion in der Resorption von Salz und Wasser, vor allem in den Anfangsbereichen (Colon ascendens):
+    </p>
+    <p>
+        Hier wird der Wassergehalt der Nahrungsreste von etwa einem Liter auf 100 bis 200 Milliliter reduziert. Das
+        bedeutet, dass 80 bis 90 Prozent des Wassers und nahezu die gesamten Elektrolyte (Natrium, Kalium, Chlorid), die
+        im Dickdarm landen, ins Blut aufgenommen werden.
+    </p>
+    <p>
+        Darüber hinaus sondern Drüsen in der Darmwand Schleim ab, der die Nahrungsreste gleitfähig macht.
+    </p>
+    <b>Darmflora</b>
+    <p>
+        Im Dickdarm leben unzählige Mikroorganismen (Bakterien, Einzeller und Viren), welche die sogenannte Darmflora
+        ausmachen - auch Mikrobiom des Darms genannt. Sie verarbeiten schwer verdauliche Stoffe wie zum Beispiel
+        Zellulose und sind für eine geregelte Verdauung unabdingbar. Die Darmflora kann beispielsweise durch Antibiotika
+        empfindlich gestört werden, was Verdauungsstörungen nach sich ziehen kann.
+    </p>
+    <b>Die Peristaltik der Darmwand</b>
+    <p>
+        Die muskuläre Dickdarm-Wand befördert die nicht verwertbaren Nahrungsreste in Richtung After, wo sie als Kot
+        (Fäzes) ausgeschieden werden. Im aufsteigenden Anteil des Dickdarms (Colon ascendens) und im Blinddarm (Zökum)
+        ist auch eine rückwärts gerichtete Peristaltik möglich, die eine Speicherung des Stuhls in diesen
+        Dickdarm-Abschnitten ermöglicht. Zwei- bis dreimal täglich erfolgt eine analwärts gerichtete Peristaltik in den
+        Enddarm (Rektum), dessen Dehnung dann den Stuhldrang auslöst. Manche Menschen haben auch nur alle paar Tage und
+        nicht täglich Stuhlgang.
+    </p>
+    <b>Welche Probleme kann der Dickdarm verursachen?</b>
+    <p>
+        Ein Reizdarm (Colon irritabile) ist die häufigste Erkrankung in einer gastroenterologischen Praxis. Er beginnt
+        meist im Alter zwischen 20 und 30 Jahren und betrifft Frauen häufiger als Männer. Die Betroffenen leiden unter
+        Bauchschmerzen, Verstopfung oder Durchfall sowie Blähungen, ohne dass sich dafür eine organische Ursache finden
+        lässt. Der Verlauf ist meist chronisch.
+    </p>
+    <p>
+        Eine Entzündung des Wurmfortsatzes (Appendizitis) ist allgemein als Blinddarmentzündung bekannt. Sie tritt vor
+        allem bei Kindern zwischen zehn und 15 Jahren auf.
+    </p>
+    <p>
+        Divertikel sind Ausstülpungen der Darmwand, die meist symptomlos bleiben. Sie können sich aber auch entzünden,
+        was als Divertikulitis bezeichnet wird.
+    </p>
+    <p>
+        Darmpolypen sind Vorwölbungen der Darmwand ins Innere des Darms. Sie bilden sich vor allem im letzten
+        Dickdarm-Abschnitt (Rektum) und können in einigen Fällen die Vorstufe zu Darmkrebs sein.
+    </p>
+    <p>
+        Bei Menschen mit Hämorrhoiden ist das Gefäßpolster zwischen Enddarm und Afterschließmuskeln erweitert oder
+        angeschwollen. Ursache kann etwa wiederholtes starkes Pressen bei der Stuhlentleerung sein.
+    </p>
+    <p>
+        Morbus Crohn und Colitis ulcerosa sind chronisch-entzündliche Darmerkrankungen (CED). Morbus Crohn kann den
+        gesamten Verdauungstrakt betreffen, manifestiert sich aber besonders oft im letzten Dünndarm-Abschnitt
+        (Krummdarm oder Ileum). Colitis ulcerosa beschränkt sich auf den Dickdarm.
+    </p>
+</div>
+<a href="#dickdarmTitel" id="dickdarmToggle"
+   onclick="toggleDisplay('dickdarm','dickdarmToggle')">Lesen Sie mehr</a>
+<br><br>
+<h3>Wie lang ist der Darm insgesamt?</h3>
+<p>
+    Die gesamte Darmlänge beträgt etwa acht Meter. Davon entfallen fünf bis sechs Meter auf den Dünn- und der Rest auf
+    den Dickdarm.
+</p>
+<div class="artikelUbersicht">
+    <a aria-label="Artikel Ubersicht" href="#artikel_ubersicht">
+        <div class="artikelUbersichtElement" style="text-align: right">Zum Inhaltsverzeichnis</div>
+    </a>
+</div>
+
+<h2 id="welche_funktion_hat_das_darm">Welche Funktion hat das Darm?</h2>
+<p>
+    Der meterlange Verdauungskanal sorgt nicht nur für die chemische Zerlegung der Nahrung, die Aufnahme der
+    Nahrungsbestandteile in den Körper (Resorption) und die Ausscheidung der Nahrungsreste über den Anus. Er stellt auch
+    eine Barriere für Krankheitserreger dar und spielt eine wichtige Rolle für die Regulation des Wasserhaushalts: Der
+    Darm kann große Mengen Flüssigkeit resorbieren und auch ausscheiden.
+</p>
+<h4>Dünndarm-Funktion</h4>
+<p>
+    In den Zwölffingerdarm (Duodenum) münden die großen Verdauungsdrüsen: die Leber, deren Sekret (Galle genannt) in der
+    Gallenblase zwischengespeichert werden kann, und die Bauchspeicheldrüse (Pankreas). Beide Verdauungssekrete
+    enthalten wichtige Verdauungsenzyme zur chemischen Spaltung der Kohlenhydrate, Fette und Eiweiße.
+</p>
+<p>
+    Zusätzliche Drüsensekrete, die aus der Darmwand selbst stammen, beteiligen sich an der Verdauung. Nachdem die
+    Nahrung in Mund und Magen zerkleinert und angedaut wurde, werden im gesamten Dünndarm die Nahrungskomponenten in
+    kleine Bestandteile zerlegt und ins Blut aufgenommen (resorbiert):
+</p>
+<p>
+    Kohlenhydrate werden in Einfachzucker (Monosaccharide) zerlegt, Eiweiße in die einzelnen Aminosäuren, und Fette
+    werden in Glyzerin und freie Fettsäuren gespalten. Nach ihrer Resorption ins Blut werden diese Nährstoffe als erstes
+    über die Pfortader in die Leber transportiert. Sie ist das zentrale Stoffwechselorgan.
+</p>
+<p>
+    Auch andere Stoffe werden auf diese Weise in den Körper aufgenommen, so etwa Vitamine und Mineralstoffe.
+</p>
+<h4>Dickdarm-Funktion</h4>
+<p>
+    In den Dickdarm gelangen die Nahrungsbestandteile, die der Körper nicht braucht beziehungsweise nicht verwerten
+    kann. Die Muskelwand schiebt diesen Brei mit wellenartigen (peristaltischen) Bewegungen durch die einzelnen
+    Abschnitte bis hin zum Ausgang (Anus). Auf seinem Weg wird der Stuhl (Kot) durch Wasserentzug eingedickt. Von der
+    Darmwand abgesonderter Schleim macht ihn gleitfähig.
+</p>
+<p>
+    Im Dickdarm leben natürlicherweise unzählige Bakterien von mehr als 400 verschiedenen Arten. Ihre Gesamtzahl wird
+    auf ungefähr zehn Billionen geschätzt, ihr Gesamtgewicht auf etwa 1,5 Kilo. Sie verarbeiten die unverdaulichen
+    Nahrungsreste. Außerdem produzieren sie Stoffe, die der Körper zum Teil gebrauchen kann (manche B-Vitamine, Vitamin
+    K).
+</p>
+<p>
+    Durch die Arbeit der Darmbakterien entstehen auch Gase und Stoffe, die dem eingedickten Nahrungsbrei Farbe und
+    Geruch verleihen. Dieser nicht mehr verwertbare Kot wird letztlich über den Anus nach außen befördert.
+</p>
+<div class="artikelUbersicht">
+    <a aria-label="Artikel Ubersicht" href="#artikel_ubersicht">
+        <div class="artikelUbersichtElement" style="text-align: right">Zum Inhaltsverzeichnis</div>
+    </a>
+</div>
+
+<h2 id="wo_befindet_sich_das_darm">Wo befindet sich das Darm?</h2>
+<p>
+    Er füllt fast den ganzen Bauchraum unterhalb des Magens aus. Das Duodenum liegt im Oberbauch direkt unter dem Magen,
+    das Jejunum schließt sich links oben an und das Ileum rechts unten. Die zahlreichen Schlingen von Jejunum und Ileum
+    werden zusammen als Konvolut bezeichnet. Es wird gewissermaßen vom Kolon eingerahmt. Dieses mündet dann unten mit
+    Rektum und After nach außen.
+</p>
+<div class="artikelUbersicht">
+    <a aria-label="Artikel Ubersicht" href="#artikel_ubersicht">
+        <div class="artikelUbersichtElement" style="text-align: right">Zum Inhaltsverzeichnis</div>
+    </a>
+</div>
+
+<h2 id="welche_probleme_kann_der_darm_verursachen">Welche Probleme kann der Darm verursachen?</h2>
+<p>
+    Bei einem Zwölffingerdarmgeschwür (Ulcus duodeni) ist ein mehr oder weniger großer Bereich der Schleimhaut im
+    Duodenum geschädigt. Oft tritt zusärtlich auch ein Magengeschwür (Ulcus ventriculi) auf. Männer sind häufiger
+    betroffen als Frauen. Ursache des Geschwürs ist in den meisten Fällen eine Infektion mit dem "Magenkeim"
+    Helicobacter pylori.
+</p>
+<p>
+    Ein Reizdarm (Colon irritabile) äußert sich in chronischen Beschwerden wie Durchfall und/oder Verstopfung, Blähungen
+    und Bauchschmerzen. Eine organische Ursache dafür lässt sich nicht feststellen. Von der Erkrankung sind vor allem
+    Frauen betroffen.
+</p>
+<p>
+    Eine "Magen-Darm-Grippe" ist eine durch Krankheitserreger ausgelöste Entzündung der Schleimhaut im Verdauungstrakt,
+    die zu Brechdurchfall führen kann.
+</p>
+<p>
+    Morbus Crohn und Colitis ulcerosa sind chronisch-entzündliche Darmerkrankungen (CED). Morbus Crohn kann den gesamten
+    Verdauungskanal (von der Mundhöhle bis zum After) befallen. Der Entzündungsprozess bei der Colitis ulcerosa beginnt
+    meist im Rektum und breitet sich im Kolon aus.
+</p>
+<p>
+    Bei Menschen, die unter Hämorrhoiden zu leiden haben, ist ein Gefäßpolster im Analkanal krankhaft erweitert.
+    Mögliche Symptome sind zum Beispiel hellrote Blutspuren auf dem Stuhl oder Toilettenpapier, Druckschmerzen, Brennen
+    oder Juckreiz am After. In fortgeschrittenen Stadien kann der Stuhl nicht mehr zurückgehalten werden. Zu den
+    Risikofaktoren für Hämorrhoiden zählen wiederholtes starkes Pressen beim Stuhlgang, ballaststoffarme Ernährung,
+    Schwangerschaft und Bindegewebsschwäche.
+</p>
+<p>
+    Divertikel sind Ausstülpungen der Darmwand nach außen. Bilden sich mehrere Divertikel nebeneinander, bezeichnen
+    Mediziner dies als Divertikulose. Die Ausstülpungen können sich entzünden (Divertikulitis). Manchmal platzen sie
+    auch, wobei sich die Entzündung dann auf das Bauchfell ausbreiten kann. Eine Divertikulitis wird mit Antibiotika
+    behandelt. Manchmal müssen die entzündeten Divertikel auch operativ entfernt werden.
+</p>
+<p>
+    Darmpolypen sind Vorwölbungen der Schleimhaut, die sich vor allem im Kolon und Rektum bilden - meist ohne erkennbare
+    Ursache. Sie verursachen oft keine Beschwerden, sollten aber trotzdem entfernt werden, weil sie entarten und zu
+    Darmkrebs führen können. Diese Form der Krebserkrankung ist weit verbreitet. Meist bildet sich der bösartige Tumor
+    im Darm in den letzten beiden Darmabschnitten: Kolon (Kolonkarzinom) oder Rektum (Enddarmkarzinom).
+</p>
+<div class="artikelUbersicht">
+    <a aria-label="Artikel Ubersicht" href="#artikel_ubersicht">
+        <div class="artikelUbersichtElement" style="text-align: right">Zum Inhaltsverzeichnis</div>
+    </a>
+</div>
+<script>
+    function toggleDisplay(elementId, linkId) {
+        document.getElementById(elementId).style.display = document.getElementById(elementId).style.display === 'none' ? 'block' : 'none';
+        document.getElementById(linkId).textContent = document.getElementById(elementId).style.display === 'none' ? 'Lesen Sie Mehr...' : 'Inhalt verbergen.';
+    }
+</script>
+</body>
+</html>

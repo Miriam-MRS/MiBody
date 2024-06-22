@@ -9,14 +9,13 @@ include("functions.php");
 
 $db = new firebaseRDB($databaseURL);
 $logged_in = false;
-$user_data = check_login($db);
-$db = new firebaseRDB($databaseURL);
-                                    $data = [
-                                        "user_id" => 5,
-                                        "username" => "Miriam",
-                                        "email" => "plesa@yahoo.com",
-                                        "password" => "1234"
-                                    ];
+//$user_data = check_login($db);
+$insert = $db->insert("user", [
+    "user_id" => 5,
+    "userName" => "Miriam",
+    "useerEmail" => "plesamiriam@yahoo.com",
+    "userPassword" => "Crestin1"
+]);
 ?>
 
 <!DOCTYPE html>

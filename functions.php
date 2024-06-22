@@ -25,8 +25,7 @@ function check_login($db) {
             echo "Error: " . $e->getMessage();
             return null;
         }
-    } else {   
-        print("No login");
+    } else {
         return null; // No user_id in session
     }
 }

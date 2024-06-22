@@ -1,11 +1,8 @@
 <?php
 session_start();
 $con = mysqli_init();
-mysqli_real_connect($con, "mibodywebapp-server.mysql.database.azure.com", "zrpvczwzph", "tebOCBsYaEC$F2UF", "mibodywebapp-database", 3306, MYSQLI_CLIENT_SSL);
+mysqli_real_connect($conn, "mibodywebapp-server.mysql.database.azure.com", "zrpvczwzph", "tebOCBsYaEC$F2UF", "mibodywebapp-database", 3306, MYSQLI_CLIENT_SSL);
 
-include("functions.php");
-$logged_in = false;
-$user_data = check_login($con);
 
 ?>
 <!DOCTYPE html>

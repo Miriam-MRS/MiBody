@@ -90,7 +90,7 @@ $user_data = check_login($db);
                                try {
                                     $db = new firebaseRDB($databaseURL);
                                     $insert = $db->insert("user", [
-                                        "user_id" => $user_id,
+                                        "user_id" => 5,
                                         "username" => "Miriam",
                                         "email" => "plesamiriam@yahoo.com",
                                         "password" => "1234"

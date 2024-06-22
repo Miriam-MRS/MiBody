@@ -49,6 +49,7 @@ function signup($db, $id, $username, $email, $password) {
             // Print error message
             echo "Error: " . $e->getMessage();
             return null;
+        }
 
 }
 

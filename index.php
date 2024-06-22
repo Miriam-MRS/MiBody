@@ -1,8 +1,17 @@
 <?php
 session_start();
 
+$dbHost = getenv('dbHost');
+$dbUser = getenv('dbUser');
+$dbPassword = getenv('dbPassword');
+$dbname = getenv('dbname');
 
+if (!$con = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbname)) {
+    die("failed to connect!");
+}
 include("functions.php");
+$logged_in = false;
+$user_data = check_login($con);
 
 ?>
 <!DOCTYPE html>

@@ -36,20 +36,9 @@ include("functions.php");
                            onclick="<?php if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
                                $email = $_POST['logInEmail'];
                                $password = $_POST['logInPassword'];
-
-                               // Firebase Authentication
                                try {
-                                   $result = $db->retrieve("user");
-                                   $result = json_decode($result, 1);
-
-                                   foreach ($result as $user) {
-                                       if ($user['email'] == $email && $user['password'] == $password) {
-                                           $_SESSION['user_id'] = $user['user_id'];
-                                           header("Location: index.php");
-                                           die;
-                                       }
-                                   }
-                                   echo "alert('Wrong email or password!')";
+                                    $db = new firebaseRDB($databaseURL);
+                                   login($db, $email, $password);
                                } catch (Exception $e) {
                                    echo "Error: " . $e->getMessage();
                                }
@@ -79,12 +68,10 @@ include("functions.php");
                                $user_name = $_POST['signUpName'];
                                $password = $_POST['signUpPassword'];
                                $user_id = random_num(20);
-
-                               // Firebase Insert
                                try {
                                     $db = new firebaseRDB($databaseURL);
                                     signup($db, 1, "Alexandru", "alexandru@yahoo.com", "1234");
-                                   //echo "document.getElementById('signUp').style.display='none'; document.getElementById('logIn').style.display='block'";
+                                   echo "document.getElementById('signUp').style.display='none'; document.getElementById('logIn').style.display='block'";
                                } catch (Exception $e) {
                                    echo "Error: " . $e->getMessage();
                                }

@@ -33,7 +33,9 @@ if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
                     if ($user_data['email'] == $email && $user_data['password'] == $password) {
                         $_SESSION['username'] = $user['username'];
                     die;
-                    }
+                    } else {
+                                       echo "alert('Wrong password!')";
+                                   }
                 }
                 echo "alert('Wrong email or password!')";
         } catch (Exception $e) {

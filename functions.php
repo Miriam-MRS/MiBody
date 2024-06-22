@@ -7,11 +7,12 @@ include("firebaseRDB.php");
 
 function check_login($db) {
     if (isset($_SESSION['user_id'])) {
+        print_r($_SESSION['user_id']);
         $id = $_SESSION['user_id'];
 
         try {
             // Retrieve user data from Firebase
-            $user_data = $db->retrieve("users/$id");
+            $user_data = $db->retrieve("users");
             $user_data = json_decode($user_data, true);
 
             // Check if user data is found

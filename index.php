@@ -45,7 +45,7 @@ $user_data = check_login($db);
 
                                // Firebase Authentication
                                try {
-                                   $result = $db->retrieve("user");
+                                   $result = $db->retrieve("users");
                                    $result = json_decode($result, 1);
 
                                    foreach ($result as $user) {
@@ -87,7 +87,7 @@ $user_data = check_login($db);
 
                                // Firebase Insert
                                try {
-                                   $insert = $db->insert("user/$user_id", [
+                                   $insert = $db->insert("users", [
                                        "user_id" => $user_id,
                                        "username" => $user_name,
                                        "password" => $password,

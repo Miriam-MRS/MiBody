@@ -6,14 +6,13 @@ error_reporting(E_ALL);
 
 $con = mysqli_init();
 mysqli_ssl_set($con,NULL,NULL, "certificate.crt", NULL, NULL);
-mysqli_real_connect($con, "mibodywebapp-server.mysql.database.azure.com", "zrpvczwzph", "tebOCBsYaEC$F2UF", "mibodywebapp-database", 3306, MYSQLI_CLIENT_SSL);
 
 // Connect to the MySQL database
 if (!$con) {
     die("mysqli_init failed");
 }
 
-if (!mysqli_real_connect($con, $server, $username, $password, $database, 3306)) {
+if (!mysqli_real_connect($con, "mibodywebapp-server.mysql.database.azure.com", "zrpvczwzph", "tebOCBsYaEC$F2UF", "mibodywebapp-database", 3306, MYSQLI_CLIENT_SSL);) {
     die("Connect Error (" . mysqli_connect_errno() . ") " . mysqli_connect_error());
 }
 

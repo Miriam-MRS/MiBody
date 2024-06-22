@@ -89,12 +89,13 @@ $user_data = check_login($db);
                                // Firebase Insert
                                try {
                                     $db = new firebaseRDB($databaseURL);
-                                    $insert = $db->insert("user", [
-                                        "user_id" => 5,
-                                        "username" => "Miriam",
-                                        "email" => "plesamiriam@yahoo.com",
-                                        "password" => "1234"
-                                    ]);
+                                    $data = [
+                                        "user_id" => $user_id,
+                                        "username" => $user_name,
+                                        "email" => $email,
+                                        "password" => $password
+                                    ];
+                                    $insert = $db->getReference("users")->push($data);
                                    echo "document.getElementById('signUp').style.display='none'; document.getElementById('logIn').style.display='block'";
                                } catch (Exception $e) {
                                    echo "Error: " . $e->getMessage();

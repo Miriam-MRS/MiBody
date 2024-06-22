@@ -3,27 +3,31 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include("config.php");
+
+$databaseURL = "https://mibody-86533-default-rtdb.europe-west1.firebasedatabase.app/";
+include("firebaseRDB.php");
 include("functions.php");
+
+$db = new firebaseRDB($databaseURL);
 $logged_in = false;
-$user_data = check_login($con);
+$user_data = check_login($db);
 ?>
 
 <!DOCTYPE html>
 <html lang="de">
-<title>MiBody</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="Styles/css.css">
-<link rel="stylesheet" href="Styles/fonts.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<head>
+    <title>MiBody</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles/css.css">
+    <link rel="stylesheet" href="Styles/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body>
 
 <div style="position:absolute; height: 100%" id="aux"></div>
-<!-- Auhentication -->
-<div id="authenticationPanel" class="modal" style="display: <?php if (isset($user_data)) echo "none";
-else echo "block" ?>">
+<!-- Authentication -->
+<div id="authenticationPanel" class="modal" style="display: <?php if (isset($user_data)) echo "none"; else echo "block" ?>">
     <div class="modal-content animate-top card-4">
         <div id="logIn" style="display: block">
             <header class="container white center padding-32">
@@ -39,17 +43,22 @@ else echo "block" ?>">
                            onclick="<?php if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
                                $email = $_POST['logInEmail'];
                                $password = $_POST['logInPassword'];
-                               $query = "select * from users where email = '$email' limit 1";
-                               $result = mysqli_query($con, $query);
-                               if ($result && mysqli_num_rows($result) > 0) {
-                                   $user_data = mysqli_fetch_assoc($result);
-                                   if ($user_data['password'] === $password) {
-                                       $_SESSION['user_id'] = $user_data['user_id'];
-                                       header("Location: index.php");
-                                       die;
-                                   } else {
-                                       echo "alert('Wrong password!')";
+
+                               // Firebase Authentication
+                               try {
+                                   $result = $db->retrieve("users");
+                                   $result = json_decode($result, true);
+
+                                   foreach ($result as $user) {
+                                       if ($user['email'] == $email && $user['password'] == $password) {
+                                           $_SESSION['user_id'] = $user['user_id'];
+                                           header("Location: index.php");
+                                           die;
+                                       }
                                    }
+                                   echo "alert('Wrong email or password!')";
+                               } catch (Exception $e) {
+                                   echo "Error: " . $e->getMessage();
                                }
                            } ?>">
                     <p class="right">Haben Sie kein Konto? <a style="cursor: pointer" class="text-blue"
@@ -76,9 +85,20 @@ else echo "block" ?>">
                                $user_name = $_POST['signUpName'];
                                $password = $_POST['signUpPassword'];
                                $user_id = random_num(20);
-                               $query = "insert into users (user_id,username,password,email) values ('$user_id','$user_name','$password','$email')";
-                               mysqli_query($con, $query);
-                               echo "document.getElementById('signUp').style.display='none'; document.getElementById('logIn').style.display='block'";
+
+                               // Firebase Insert
+                               try {
+                                   $insert = $db->insert("users/$user_id", [
+                                       "user_id" => $user_id,
+                                       "username" => $user_name,
+                                       "password" => $password,
+                                       "email" => $email
+                                   ]);
+
+                                   echo "document.getElementById('signUp').style.display='none'; document.getElementById('logIn').style.display='block'";
+                               } catch (Exception $e) {
+                                   echo "Error: " . $e->getMessage();
+                               }
                            } ?>">
                     <p class="right">Haben Sie ein Konto? <a style="cursor: pointer" class="text-blue"
                                                              onclick="document.getElementById('signUp').style.display='none'; document.getElementById('logIn').style.display='block'">Einloggen</a>

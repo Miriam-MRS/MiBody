@@ -47,14 +47,5 @@ function random_num($length) {
 
 // Example usage
 session_start();
-$_SESSION['user_id'] = "some_user_id"; // For demonstration purposes
 
-$db = new firebaseRDB($databaseURL);
-$user = check_login($db);
-
-if ($user) {
-    print_r($user);
-} else {
-    echo "No user found or not logged in.";
-}
 ?>

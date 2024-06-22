@@ -1,14 +1,8 @@
 <?php
 session_start();
+$con = mysqli_init();
+mysqli_real_connect($con, "mibodywebapp-server.mysql.database.azure.com", "zrpvczwzph", "tebOCBsYaEC$F2UF", "mibodywebapp-database", 3306, MYSQLI_CLIENT_SSL);
 
-$dbHost = getenv('dbHost');
-$dbUser = getenv('dbUser');
-$dbPassword = getenv('dbPassword');
-$dbname = getenv('dbname');
-
-if (!$con = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbname)) {
-    die("failed to connect!");
-}
 include("functions.php");
 $logged_in = false;
 $user_data = check_login($con);

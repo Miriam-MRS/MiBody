@@ -40,7 +40,7 @@ include("functions.php");
 
                                // Firebase Authentication
                                try {
-                                   $result = $db->retrieve("users");
+                                   $result = $db->retrieve("user");
                                    $result = json_decode($result, 1);
 
                                    foreach ($result as $user) {

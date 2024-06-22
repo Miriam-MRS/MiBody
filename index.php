@@ -3,7 +3,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
+$F2UF = "tebOCBsYaEC\$F2UF";
 $con = mysqli_init();
 
 // Connect to the MySQL database
@@ -15,7 +15,7 @@ if (!mysqli_ssl_set($con,NULL,NULL, "./certificate.crt", NULL, NULL)) {
     die("Connect Error (" . mysqli_connect_errno() . ") " . mysqli_connect_error());
 }
 
-if (!mysqli_real_connect($con, "mibodywebapp-server.mysql.database.azure.com", "zrpvczwzph", "tebOCBsYaEC$F2UF", "mibodywebapp-database", 3306, MYSQLI_CLIENT_SSL)) {
+if (!mysqli_real_connect($con, "mibodywebapp-server.mysql.database.azure.com", "zrpvczwzph", "$F2UF", "mibodywebapp-database", 3306, MYSQLI_CLIENT_SSL)) {
     die("Connect Error (" . mysqli_connect_errno() . ") " . mysqli_connect_error());
 }
 

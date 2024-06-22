@@ -62,8 +62,7 @@ include("functions.php");
                     <p><label><i class="fa fa-key"></i> Passwort:</label></p>
                     <input class="input border" type="password" name="signUpPassword" placeholder="******" required>
                     <input class="button block teal padding-16 section right" value="Einloggen" type="submit"
-                           onclick="<?php  print_r("Signup: ", $_POST['signUpEmail'], $_POST['signUpName'], $_POST['signUpPassword']);
-                            if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST['signUpPassword'])) {
+                           onclick="<?php 
                                $email = $_POST['signUpEmail'];
                                $user_name = $_POST['signUpName'];
                                $password = $_POST['signUpPassword'];
@@ -75,7 +74,7 @@ include("functions.php");
                                } catch (Exception $e) {
                                    echo "Error: " . $e->getMessage();
                                }
-                           } ?>">
+                            ?>">
                     <p class="right">Haben Sie ein Konto? <a style="cursor: pointer" class="text-blue"
                                                              onclick="document.getElementById('signUp').style.display='none'; document.getElementById('logIn').style.display='block'">Einloggen</a>
                     </p><br><br>

@@ -1,8 +1,4 @@
 <?php
-// Error reporting for debugging
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 include("functions.php");
 $logged_in = false;
 $db = new firebaseRDB($databaseURL);
@@ -24,8 +20,6 @@ if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST[
                  throw new Exception("Failed to insert data into Firebase Database");
              }
         } catch (Exception $e) {
-            // Print error message
-            echo "Error: " . $e->getMessage();
             return null;
         }
 }
@@ -48,8 +42,6 @@ if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
                 }
                 echo "alert('Wrong email or password!')";
         } catch (Exception $e) {
-            // Print error message
-            echo "Error: " . $e->getMessage();
             return null;
         }
 }

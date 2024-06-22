@@ -1,7 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 $databaseURL = "https://mibody-86533-default-rtdb.europe-west1.firebasedatabase.app/";
 include("firebaseRDB.php");
 
@@ -21,8 +18,6 @@ function check_login($db) {
                 return null; // No user data found
             }
         } catch (Exception $e) {
-            // Print error message
-            echo "Error: " . $e->getMessage();
             return null;
         }
     } else {

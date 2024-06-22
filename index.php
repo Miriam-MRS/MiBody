@@ -1,4 +1,10 @@
+<?php
+session_start();
 
+
+include("functions.php");
+
+?>
 <!DOCTYPE html>
 <html lang="de">
 <title>MiBody</title>

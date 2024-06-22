@@ -6,15 +6,6 @@ error_reporting(E_ALL);
 include("config.php");
 include("firebaseRDB.php);
 
-$db = new firebaseRDB($databaseURL);
-$insert = $db->insert("user", [
-    "userName" => "Miriam",
-    "useerEmail" => "plesamiriam@yahoo.com",
-    "userPassword" => "Crestin1"
-]);
-$data = $db->retrieve("user");
-$data = json_decode($data, 1);
-print_r($data);
 ?>
 
 <!DOCTYPE html>

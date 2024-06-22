@@ -6,7 +6,7 @@ $databaseURL = "https://mibody-86533-default-rtdb.europe-west1.firebasedatabase.
 include("firebaseRDB.php");
 
 function check_login($db) {
-    print_r("Check login");
+    print("Check login");
     if (isset($_SESSION['user_id'])) {
         print_r($_SESSION['user_id']);
         $id = $_SESSION['user_id'];
@@ -28,7 +28,7 @@ function check_login($db) {
             return null;
         }
     } else {   
-        print_r("No login");
+        print("No login");
         return null; // No user_id in session
     }
 }

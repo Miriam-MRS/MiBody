@@ -1,19 +1,4 @@
-<?php
-session_start();
 
-$dbHost = "localhost";
-$dbUser = "root";
-$dbPassword = "112932";
-$dbname = "login_db";
-
-if (!$con = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbname)) {
-    die("failed to connect!");
-}
-include("functions.php");
-$logged_in = false;
-$user_data = check_login($con);
-
-?>
 <!DOCTYPE html>
 <html lang="de">
 <title>MiBody</title>

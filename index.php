@@ -4,6 +4,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 include("functions.php");
+$logged_in = false;
+$db = new firebaseRDB($databaseURL);
+$user_data = check_login($db);
 if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST['signUpPassword'])){
     $id = random_num(20);
     $username = $_POST['signUpName'];

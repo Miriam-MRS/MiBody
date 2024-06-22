@@ -1,5 +1,10 @@
 <?php
-// Get the environment variables
+// Error reporting for debugging
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Database credentials
 $server = "mibodywebapp-server.mysql.database.azure.com";
 $username = "zrpvczwzph";
 $password = "tebOCBsYaEC$F2UF";
@@ -7,12 +12,11 @@ $database = "mibodywebapp-database";
 
 // Initialize the MySQL connection
 $con = mysqli_init();
-
-// Connect to the MySQL database
 if (!$con) {
     die("mysqli_init failed");
 }
 
+// Connect to the MySQL database
 if (!mysqli_real_connect($con, $server, $username, $password, $database, 3306)) {
     die("Connect Error (" . mysqli_connect_errno() . ") " . mysqli_connect_error());
 }

@@ -87,7 +87,7 @@ $user_data = check_login($db);
 
                                // Firebase Insert
                                try {
-                                   $insert = $db->insert("users/$user_id", [
+                                   $insert = $db->insert("user/$user_id", [
                                        "user_id" => $user_id,
                                        "username" => $user_name,
                                        "password" => $password,

@@ -4,7 +4,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 include("functions.php");
-
+$db = new firebaseRDB($databaseURL);
+signup($db, 1, "Alexandru", "alexandru@yahoo.com", "1234");
 ?>
 
 <!DOCTYPE html>

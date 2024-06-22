@@ -45,8 +45,8 @@ $user_data = check_login($db);
 
                                // Firebase Authentication
                                try {
-                                   $result = $db->retrieve("users");
-                                   $result = json_decode($result, true);
+                                   $result = $db->retrieve("user");
+                                   $result = json_decode($result, 1);
 
                                    foreach ($result as $user) {
                                        if ($user['email'] == $email && $user['password'] == $password) {

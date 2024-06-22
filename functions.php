@@ -13,7 +13,7 @@ function check_login($db) {
 
         try {
             // Retrieve user data from Firebase
-            $user_data = $db->retrieve("users");
+            $user_data = $db->retrieve("user");
             $user_data = json_decode($user_data, true);
 
             // Check if user data is found

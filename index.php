@@ -11,7 +11,7 @@ if (!$con) {
     die("mysqli_init failed");
 }
 
-if (!mysqli_ssl_set($con,NULL,NULL, "./certificate.crt", NULL, NULL)) {
+if (!mysqli_ssl_set($con,NULL,NULL, "/home/site/wwwroot/certificate.crt", NULL, NULL)) {
     die("Connect Error (" . mysqli_connect_errno() . ") " . mysqli_connect_error());
 }
 

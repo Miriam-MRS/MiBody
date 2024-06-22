@@ -3,15 +3,10 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-$F2UF = "tebOCBsYaEC\$F2UF"; // Define $F2UF with the correct password here
-// Get the environment variables
-$server = "mibodywebapp-server.mysql.database.azure.com";
-$username = "zrpvczwzph";
-$password = $F2UF; // Use $F2UF here
-$database = "mibodywebapp-database";
 
-// Initialize the MySQL connection
 $con = mysqli_init();
+mysqli_ssl_set($con,NULL,NULL, "certificate.crt", NULL, NULL);
+mysqli_real_connect($con, "mibodywebapp-server.mysql.database.azure.com", "zrpvczwzph", "tebOCBsYaEC$F2UF", "mibodywebapp-database", 3306, MYSQLI_CLIENT_SSL);
 
 // Connect to the MySQL database
 if (!$con) {

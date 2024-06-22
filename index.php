@@ -10,6 +10,13 @@ include("functions.php");
 $db = new firebaseRDB($databaseURL);
 $logged_in = false;
 $user_data = check_login($db);
+$db = new firebaseRDB($databaseURL);
+                                    $data = [
+                                        "user_id" => 5,
+                                        "username" => "Miriam",
+                                        "email" => "plesa@yahoo.com",
+                                        "password" => "1234"
+                                    ];
 ?>
 
 <!DOCTYPE html>

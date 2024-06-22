@@ -4,6 +4,53 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 include("functions.php");
+if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST['signUpPassword'])){
+    $id = random_num(20);
+    $username = $_POST['signUpName'];
+    $email = $_POST['signUpEmail'];
+    $password = $_POST['signUpPassword'];
+        try {
+            // Insert data into 'user' node
+            $insert = $db->insert("user", [
+                "user_id" => $id,
+                "username" => $username,
+                "email" => $email,
+                "password" => $password
+             ]);
+             if (!$insert) {
+                 throw new Exception("Failed to insert data into Firebase Database");
+             }
+        } catch (Exception $e) {
+            // Print error message
+            echo "Error: " . $e->getMessage();
+            return null;
+        }
+}
+if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
+    $email = $_POST['logInEmail'];
+    $password = $_POST['logInPassword'];
+        try {
+            // Retrieve user data from Firebase
+            $user_data = $db->retrieve("user");
+            $user_data = json_decode($user_data, true);
+
+                $result = $db->retrieve("user");
+                $result = json_decode($result, 1);
+
+                foreach ($result as $user) {
+                    if ($user['email'] == $email && $user['password'] == $password) {
+                        $_SESSION['user_id'] = $user['user_id'];
+                        header("Location: index.php");
+                    die;
+                    }
+                }
+                echo "alert('Wrong email or password!')";
+        } catch (Exception $e) {
+            // Print error message
+            echo "Error: " . $e->getMessage();
+            return null;
+        }
+}
 ?>
 
 <!DOCTYPE html>
@@ -32,17 +79,7 @@ include("functions.php");
                     <input class="input border" type="email" name="logInEmail" placeholder="Email eingeben" required>
                     <p><label><i class="fa fa-key"></i> Passwort:</label></p>
                     <input class="input border" type="password" name="logInPassword" placeholder="******" required>
-                    <input class="button block teal padding-16 section right" type="submit" value="Einloggen"
-                           onclick="<?php if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
-                               $email = $_POST['logInEmail'];
-                               $password = $_POST['logInPassword'];
-                               try {
-                                    $db = new firebaseRDB($databaseURL);
-                                   login($db, $email, $password);
-                               } catch (Exception $e) {
-                                   echo "Error: " . $e->getMessage();
-                               }
-                           } ?>">
+                    <input class="button block teal padding-16 section right" type="submit" value="Einloggen">
                     <p class="right">Haben Sie kein Konto? <a style="cursor: pointer" class="text-blue"
                                                               onclick="document.getElementById('signUp').style.display='block'; document.getElementById('logIn').style.display='none'">Registrieren</a>
                     </p><br><br>
@@ -61,20 +98,7 @@ include("functions.php");
                     <input class="input border" type="email" name="signUpEmail" placeholder="Email eingeben" required>
                     <p><label><i class="fa fa-key"></i> Passwort:</label></p>
                     <input class="input border" type="password" name="signUpPassword" placeholder="******" required>
-                    <input class="button block teal padding-16 section right" value="Einloggen" type="submit"
-                           onclick="<?php 
-                               $email = $_POST['signUpEmail'];
-                               $user_name = $_POST['signUpName'];
-                               $password = $_POST['signUpPassword'];
-                               $user_id = random_num(20);
-                               try {
-                                    $db = new firebaseRDB($databaseURL);
-                                    signup($db, 1, "Alexandru", "alexandru@yahoo.com", "1234");
-                                   echo "document.getElementById('signUp').style.display='none'; document.getElementById('logIn').style.display='block'";
-                               } catch (Exception $e) {
-                                   echo "Error: " . $e->getMessage();
-                               }
-                            ?>">
+                    <input class="button block teal padding-16 section right" value="Einloggen" type="submit">
                     <p class="right">Haben Sie ein Konto? <a style="cursor: pointer" class="text-blue"
                                                              onclick="document.getElementById('signUp').style.display='none'; document.getElementById('logIn').style.display='block'">Einloggen</a>
                     </p><br><br>

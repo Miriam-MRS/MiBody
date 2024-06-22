@@ -1,25 +1,16 @@
 <?php
-// Error reporting for debugging
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-$F2UF = "tebOCBsYaEC\$F2UF";
-$con = mysqli_init();
+include("config.php");
+include("firebaseRDB.php);
 
-// Connect to the MySQL database
-if (!$con) {
-    die("mysqli_init failed");
-}
-
-if (!mysqli_ssl_set($con,NULL,NULL, "/home/site/wwwroot/certificate.crt", NULL, NULL)) {
-    die("Connect Error (" . mysqli_connect_errno() . ") " . mysqli_connect_error());
-}
-
-if (!mysqli_real_connect($con, "mibodywebapp-server.mysql.database.azure.com", "zrpvczwzph", "$F2UF", "mibodywebapp-database", 3306, MYSQLI_CLIENT_SSL)) {
-    die("Connect Error (" . mysqli_connect_errno() . ") " . mysqli_connect_error());
-}
-
-echo "Connected successfully";
+$db = new firebaseRDB($databaseURL);
+$insert = $db->insert("user", [
+    "userName" => "Miriam",
+    "useerEmail" => "plesamiriam@yahoo.com",
+    "userPassword" => "Crestin1"
+]);
+$data = $db->retrieve("user");
+$data = json_decode($data, 1);
+print_r($data);
 ?>
 
 <!DOCTYPE html>

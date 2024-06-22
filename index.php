@@ -4,14 +4,12 @@ $logged_in = false;
 $db = new firebaseRDB($databaseURL);
 $user_data = check_login($db);
 if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST['signUpPassword'])){
-    $id = 1;
     $username = $_POST['signUpName'];
     $email = $_POST['signUpEmail'];
     $password = $_POST['signUpPassword'];
         try {
             // Insert data into 'user' node
             $insert = $db->insert("user", [
-                "user_id" => $id,
                 "username" => $username,
                 "email" => $email,
                 "password" => $password
@@ -33,7 +31,7 @@ if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
 
                 foreach ($user_data as $user) {
                     if ($user_data['email'] == $email && $user_data['password'] == $password) {
-                        $_SESSION['user_id'] = $user['user_id'];
+                        $_SESSION['username'] = $user['username'];
                     die;
                     }
                 }

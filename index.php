@@ -7,6 +7,9 @@ if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST[
     $username = $_POST['signUpName'];
     $email = $_POST['signUpEmail'];
     $password = $_POST['signUpPassword'];
+
+    // Validate email and password
+    if (strpos($email, '@') !== false && strpos($email, '.') !== false && strlen($password) >= 8) {
         try {
             // Insert data into 'user' node
             $insert = $db->insert("user", [
@@ -37,7 +40,7 @@ if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
                 }
                 $_SESSION['username'] = $user_data['username'];
                 echo "<script>alert('Login successful!');</script>";
-            } 
+            }
     } catch (Exception $e) {
         echo "<script>alert('An error occurred: " . $e->getMessage() . "');</script>";
     }

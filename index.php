@@ -24,23 +24,29 @@ if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST[
 if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
     $email = $_POST['logInEmail'];
     $password = $_POST['logInPassword'];
-        try {
-            // Retrieve user data from Firebase
-            $user_data = $db->retrieve("user/$email");
-            $user_data = json_decode($user_data, true);
+    try {
+        // Retrieve user data from Firebase
+        $user_data = $db->retrieve("user/$email");
+        $user_data = json_decode($user_data, true);
 
-                foreach ($user_data as $user) {
-                    if ($user_data['email'] == $email && $user_data['password'] == $password) {
-                        $_SESSION['username'] = $user['username'];
-                    die;
-                    } else {
-                                       echo "alert('Wrong password!')";
-                                   }
+        // Check if user data was retrieved
+        if ($user_data) {
+            if ($user_data['email'] == $email && $user_data['password'] == $password) {
+                // Start the session if not already started
+                if (session_status() == PHP_SESSION_NONE) {
+                    session_start();
                 }
-                echo "alert('Wrong email or password!')";
-        } catch (Exception $e) {
-            return null;
+                $_SESSION['username'] = $user_data['username'];
+                echo "<script>alert('Login successful!');</script>";
+            } else {
+                echo "<script>alert('Wrong password!');</script>";
+            }
+        } else {
+            echo "<script>alert('Wrong email or password!');</script>";
         }
+    } catch (Exception $e) {
+        echo "<script>alert('An error occurred: " . $e->getMessage() . "');</script>";
+    }
 }
 ?>
 

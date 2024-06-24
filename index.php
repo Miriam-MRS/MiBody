@@ -37,9 +37,7 @@ if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
                 }
                 $_SESSION['username'] = $user_data['username'];
                 echo "<script>alert('Login successful!');</script>";
-            } else {
-                echo "<script>alert('Wrong password!');</script>";
-            }
+            } 
     } catch (Exception $e) {
         echo "<script>alert('An error occurred: " . $e->getMessage() . "');</script>";
     }

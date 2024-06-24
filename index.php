@@ -27,11 +27,13 @@ if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
     
     try {
         // Retrieve user data from Firebase
-        $user_data = $db->retrieve("user/$email");
-        $user_data = json_decode($user_data, true);
+        $user_data_json = $db->retrieve("user/$email");
+        var_dump($user_data_json); // Add this line for debugging
+        $user_data = json_decode($user_data_json, true);
+        var_dump($user_data); // Add this line for debugging
 
-        // Check if user data was retrieved
-        if ($user_data) {
+        // Check if user data was retrieved and is an array
+        if (is_array($user_data) && isset($user_data['email']) && isset($user_data['password'])) {
             // Validate email and password
             if ($user_data['email'] == $email && $user_data['password'] == $password) {
                 // Start the session if not already started

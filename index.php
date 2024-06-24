@@ -30,7 +30,6 @@ if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
         $user_data = json_decode($user_data, true);
 
         // Check if user data was retrieved
-        if ($user_data) {
             if ($user_data['email'] == $email && $user_data['password'] == $password) {
                 // Start the session if not already started
                 if (session_status() == PHP_SESSION_NONE) {
@@ -41,7 +40,6 @@ if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
             } else {
                 echo "<script>alert('Wrong password!');</script>";
             }
-        }
     } catch (Exception $e) {
         echo "<script>alert('An error occurred: " . $e->getMessage() . "');</script>";
     }

@@ -24,36 +24,26 @@ if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST[
 if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
     $email = $_POST['logInEmail'];
     $password = $_POST['logInPassword'];
-    
     try {
         // Retrieve user data from Firebase
-        $user_data_json = $db->retrieve("user/$email");
-        var_dump($user_data_json); // Add this line for debugging
-        $user_data = json_decode($user_data_json, true);
-        var_dump($user_data); // Add this line for debugging
+        $user_data = $db->retrieve("user/$email");
+        $user_data = json_decode($user_data, true);
 
-        // Check if user data was retrieved and is an array
-        if (is_array($user_data) && isset($user_data['email']) && isset($user_data['password'])) {
-            // Validate email and password
+        // Check if user data was retrieved
+        if ($user_data) {
             if ($user_data['email'] == $email && $user_data['password'] == $password) {
                 // Start the session if not already started
                 if (session_status() == PHP_SESSION_NONE) {
                     session_start();
                 }
                 $_SESSION['username'] = $user_data['username'];
-                echo "<script>alert('Login successful!'); window.location.href='home.php';</script>";
-                exit;
+                echo "<script>alert('Login successful!');</script>";
             } else {
-                echo "<script>alert('Wrong password!'); window.location.href='login.php';</script>";
-                exit;
+                echo "<script>alert('Wrong password!');</script>";
             }
-        } else {
-            echo "<script>alert('Wrong email or password!'); window.location.href='login.php';</script>";
-            exit;
         }
     } catch (Exception $e) {
-        echo "<script>alert('An error occurred: " . $e->getMessage() . "'); window.location.href='login.php';</script>";
-        exit;
+        echo "<script>alert('An error occurred: " . $e->getMessage() . "');</script>";
     }
 }
 ?>

@@ -8,8 +8,6 @@ if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST[
     $email = $_POST['signUpEmail'];
     $password = $_POST['signUpPassword'];
 
-    // Validate email and password
-    if (strpos($email, '@') !== false && strpos($email, '.') !== false && strlen($password) >= 8) {
         try {
             // Insert data into 'user' node
             $insert = $db->insert("user", [
@@ -23,7 +21,7 @@ if (isset($_POST['signUpEmail']) && isset($_POST['signUpName']) && isset($_POST[
         } catch (Exception $e) {
             return null;
         }
-}
+
 if (isset($_POST['logInEmail']) && $_SERVER['REQUEST_METHOD'] == "POST") {
     $email = $_POST['logInEmail'];
     $password = $_POST['logInPassword'];
